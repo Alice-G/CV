@@ -6,6 +6,8 @@ import styled from "styled-components";
 import colors from "../style/colors";
 import { Radar } from "react-chartjs-2";
 
+// TODO change padding and shape
+
 // import React from 'react';
 import {
   Chart as ChartJS,
@@ -23,24 +25,31 @@ import {
 const ComponentContainer = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
+
   width: 100%;
+
+  background-color: rgb(193, 193, 193, 0.2);
+  border-radius: 20px;
+
+  // border: 2px solid green; // DEV
 `;
 
 const ChartContainer = styled.div`
-  // background-color: ${colors.light};
-  background-color: rgb(193, 193, 193, 0.2);
-  border-radius: 20px;
-  // background-color: #a1848e;
-  height: 600px; // DECIDE with responsive issues??
-  // &::after {
-  //   content: "blah";
-  // }
+  height: 700px; // DECIDE with responsive issues??
+  width: 720px;
+
+  // border: 5px dotted blue; // DEV
 `;
 
 const Note = styled.p`
-  color: hotpink;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 300;
+  font-style: italic;
+
+  margin: auto; // center
+
+  color: ${colors.color_sectiontitle};
 `;
 
 // BLOCK BLOCK BLOCK
@@ -71,17 +80,18 @@ ChartJS.register(
 const options = {
   // maintainAspectRatio: true, // Add to prevent default behaviour of full-width/height CHECK
   layout: {
-    // padding: {
-    //   left: 50,
-    //   right: 0,
-    //   top: 0,
-    //   bottom: 0,
-    // },
+    padding: {
+      left: 5,
+      right: 5,
+      top: 5,
+      bottom: 5,
+    },
   },
   elements: {
     point: {
       // points on graph lines
       pointStyle: false,
+      radius: 0, // default to disabled in all datasets
     },
     line: {
       tension: 0.2, // TODO DECIDE
@@ -92,13 +102,14 @@ const options = {
     legend: {
       // display: false, // To hide legend
       position: "bottom",
+      align: "center", // did this work??? CHECK
       // DEV CHECK in the font options there's line height if I can't get the legend closer to graph
       labels: {
         // Legend
         // This more specific font property overrides the global property
         color: "rgba(255,255,255,0.7)", // DECIDE
         font: {
-          size: 14,
+          size: 16, // ???
           family: "Inconsolata",
         },
         // boxHeight: 25, // DECIDE
@@ -107,6 +118,7 @@ const options = {
     },
     tooltip: {
       // hover legend
+      enabled: false, // CHECK THAT THIS WORKED TODO
 
       titleColor: "blue", // DEV
       backgroundColor: "#fff", // DEV
@@ -197,7 +209,11 @@ export default function Chart() {
       <ChartContainer>
         <Radar data={data} options={options} />
       </ChartContainer>
-      <Note>Click on Legend to Hide/Show specific data</Note>
+      {/* <Note>Click on Legend to Hide/Show specific data</Note> */}
+      <Note>
+        Cliquez sur les éléments de la légende pour masquer/afficher leurs
+        données respectives
+      </Note>
     </ComponentContainer>
   );
 }

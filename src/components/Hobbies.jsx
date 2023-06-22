@@ -3,16 +3,7 @@
 import React from "react";
 //import { useState } from 'react';
 
-// TODO icon alt text
-//TODO Tidy up icons folder
-// TODO comment code+
-// import needle from "../assets/needle.png"; // DEV TODO DEL
-
-// credit icons
-
-// *******************************************
-// STYLING SECTION
-// *******************************************
+// import "animate.css";
 
 import sewing64 from "../assets/icons/001-sewing64.png";
 import sketchbook64 from "../assets/icons/013-sketchbook64.png";
@@ -21,9 +12,114 @@ import diy64 from "../assets/icons/003-diy64.png";
 import play4 from "../assets/icons/015-play-1.png";
 import d2064 from "../assets/icons/007-d2064.png";
 
-import styled from "styled-components";
+// import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import colors from "../style/colors";
 const { useState } = React;
+
+// TODO icon alt text
+//TODO Tidy up icons folder
+// TODO comment code+
+// import needle from "../assets/needle.png"; // DEV TODO DEL
+
+// WEIRD CHECK TEST fadeIn and fadeOutDown work withougt being configured why
+
+// TODO credit icons
+
+// *******************************************
+// ANIMATION STATION
+// *******************************************
+
+// TODO adjust this?
+// Hobby Icons
+const jello = keyframes`
+  11.1% {
+    -webkit-transform: none
+    transform: none
+  }
+  22.2% {
+    transform: skewX(-6.5deg) skewY(-6.5deg)
+  }
+  33.3% {
+    transform: skewX(3.25deg) skewY(3.25deg)
+  }
+  44.4% {
+    transform: skewX(-1.625deg) skewY(-1.625deg)
+  }
+  55.5% {
+    transform: skewX(0.7625deg) skewY(0.7625deg)
+  }
+  66.6% {
+    transform: skewX(-0.39125deg) skewY(-0.39125deg)
+  }
+  77.7% {
+    transform: skewX(0.190625deg) skewY(0.190625deg)
+  }
+  88.8% {
+    transform: skewX(-0.0953125deg) skewY(-0.0953125deg)
+  }
+  100% {
+    transform: none
+  }
+}
+`;
+
+// Legend Box Enter
+// const fadein = keyframes`
+
+// from {
+//   opacity: 0;
+//   }
+//   to {
+//   opacity: 1;
+//   }
+//   }
+// }
+// `;
+// https://tools.webdevpuneet.com/css-animation-generator/
+
+// Legend Box Leave
+// const fadedownout = keyframes`
+//    from {
+//    opacity: 1;
+//    }
+//     to {
+//     opacity: 0;
+//     -webkit-transform: translate3d(0, 100%, 0);
+//     transform: translate3d(0, 100%, 0);
+//     }
+//     }
+// `;
+
+const Bloop = styled.div`
+  height: 80px;
+  width: 80px;
+  background-color: cadetblue;
+
+  // -webkit-animation-name: fadeOutDown;
+  // animation-name: fadeOutDown;
+  // -webkit-animation-duration: 1s;
+  // animation-duration: 1s;
+  // -webkit-animation-fill-mode: both;
+  // animation-fill-mode: both;
+
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  &:not(:hover) {
+    color: blue;
+  }
+`;
+
+// https://css-tricks.com/different-transitions-for-hover-on-hover-off/
+
+// *******************************************
+// STYLING SECTION
+// *******************************************
 
 const TopLevelContainer = styled.div`
   // display: flex;
@@ -35,17 +131,18 @@ const TopLevelContainer = styled.div`
   // background-color: ${colors.light};
   //   height: 128px;
   //   width: 100%;
-  width: 49%;
+  // width: 49%;
 
   // HINT
-  background-color: cadetblue; // DEV
+  // background-color: cadetblue; // DEV
+  padding: 5px;
 `;
 
 const IconListContainer = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 8px;
   justify-content: space-around; // DECIDE
   // justif-content: space-between; // DECIDE FIXME why does this not work?
   // justif-content: space-evenly; // DECIDE FIXME why does this not work?
@@ -57,6 +154,15 @@ const IconListContainer = styled.div`
 
   // height: 200px; // DEV
   border: 3px dashed pink; // DEV
+`;
+
+const SectionTitle = styled.h3`
+  font-family: "IM Fell DW Pica", serif;
+  font-style: italic;
+
+  font-size: 28px; // DEV
+
+  color: ${colors.color_sectiontitle}; // DEV
 `;
 
 // TODO TODO TODO TODO adjust size padding of icons with this and component below
@@ -97,6 +203,17 @@ const HoverIconBox = styled.div`
     padding: 4px;
     // border: 3px dashed purple;
   }
+
+  &:hover {
+    color: hotpink;
+
+    animation-name: ${jello};
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+
+    transition-timing-function: ease-out; // TEST check how do I check if ease out works
+    // transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  }
 `;
 
 const Icon = styled.img`
@@ -123,14 +240,17 @@ const IconLegendContainer = styled.div`
 // `;
 
 const TextContainerBox = styled.div`
-  height: 71px;
-  // width: 300px;
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-left: 10px;
+  // height: 71px; // DECIDE
+  height
 
   background-color: rgba(51, 204, 255, 0.5); // DEV blue
   // border: 3px dotted hotpink;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 `;
 
 const ContentContainer = styled.div`
@@ -145,6 +265,8 @@ const ContentContainer = styled.div`
   // object-fit: none;
 
   border: 3px dotted #9933ff; // purple  DEV
+
+  padding: 10px; // DECIDE
 `;
 
 // TODO make it so it only works when hovering the right thing
@@ -178,12 +300,21 @@ const ListItem = styled.div`
 // *******************************************
 
 export default function Attempt2() {
-  const [open, setOPen] = useState(false); // we can chose later to make it open by default
+  const [open, setOpen] = useState(false); // we can chose later to make it open by default
   const [box, setBox] = useState("");
 
-  const toggle = () => {
-    setOPen(!open);
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnters = () => {
+    setOpen(true);
+    console.log("hover");
   };
+
+  function handleMouseLeaves(e) {
+    setOpen(false);
+    console.log("leaves: ");
+    console.log(e);
+  }
 
   const renderContent = () => {
     switch (box) {
@@ -262,69 +393,81 @@ export default function Attempt2() {
     }
   };
 
+  // const fadeout = () => {};
+
+  // All animations will take twice the time to accomplish
+  // document.documentElement.style.setProperty("--animate-duration", "2s");
+
+  // All animations will take half the time to accomplish
+  // document.documentElement.style.setProperty('--animate-duration', '.5s');
+
   // *******************************************
   // FINAL RENDER
   // *******************************************
 
   return (
     <TopLevelContainer>
+      <SectionTitle>Hobbies</SectionTitle>
       <IconListContainer>
         <HoverIconBox
-          onClick={() => {
+          onMouseEnter={() => {
             setBox("Sewing");
-            toggle();
+            handleMouseEnters();
           }}
+          onMouseLeave={handleMouseLeaves}
         >
-          {/* style="{width: 65%};" */}
           <Icon src={sewing64} alt="thread icon" />
         </HoverIconBox>
         <HoverIconBox
-          onClick={() => {
+          onMouseEnter={() => {
             setBox("art");
-            toggle();
+            handleMouseEnters();
+          }}
+          onMouseLeave={() => {
+            // toggle();
           }}
         >
           <Icon src={sketchbook64} alt="sketchbook icon" />
         </HoverIconBox>
 
         <HoverIconBox
-          onClick={() => {
+          onMouseEnter={() => {
             setBox("stories");
-            toggle();
+            handleMouseEnters();
           }}
         >
           <Icon src={book2} alt="magical book icon" />
         </HoverIconBox>
 
         <HoverIconBox
-          onClick={() => {
+          onMouseEnter={() => {
             setBox("diy");
-            toggle();
+            handleMouseEnters();
           }}
         >
           <Icon src={diy64} alt="diy icon" />
         </HoverIconBox>
 
         <HoverIconBox
-          onClick={() => {
+          onMouseEnter={() => {
             setBox("play");
-            toggle();
+            handleMouseEnters();
           }}
         >
           <Icon src={play4} alt="media play icon" />
         </HoverIconBox>
 
         <HoverIconBox
-          onClick={() => {
+          onMouseEnter={() => {
             setBox("d20");
-            toggle();
+            handleMouseEnters();
           }}
         >
           <Icon src={d2064} alt="d20 icon" />
         </HoverIconBox>
       </IconListContainer>
 
-      <IconLegendContainer onClick={toggle}>
+      <IconLegendContainer>
         {/* <Box> */}
         {open && <TextContainerBox>{renderContent()}</TextContainerBox>}
         {/* </Box> */}

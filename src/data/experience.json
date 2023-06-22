@@ -1,0 +1,90 @@
+[
+  {
+    "id": "BB",
+
+    "jobtitle": "Manager",
+    "workplace": "Bistro Burger",
+    "sector": "restauration",
+    "dates": "Jul 2018 - Aug 2022",
+    "location": "Paris",
+    "description": "???????????????????????",
+    "skills": "???????????????????????",
+    "responsibilities": [
+      "Team Coordination",
+      "Shift Management",
+      "Key Holder",
+      "Stock Management",
+      "Stress Management"
+    ],
+    "tags": []
+  },
+
+  {
+    "id": "BIA",
+    "jobtitle": "Senior Staff -   Shift Manager",
+    "workplace": "Breakfast In America",
+    "sector": "restauration",
+    "dates": "  Jun 2014 - Oct 2018",
+    "location": "Paris",
+    "description": " Team language: English. ???????????????????????",
+    "skills": "???????????????????????",
+    "responsibilities": ["Key Holder", "Shift Management", "Till check "],
+    "tags": ["in english"]
+  },
+
+  {
+    "id": "tS",
+    "jobtitle": "Marketing Communication Specialist",
+    "workplace": "talkSpirit",
+    "sector": "SS2I",
+    "dates": "Jun 2012 - Dec 2012 · 7 mos",
+    "location": "Malakoff - IDF",
+    "description": "???????????????????????",
+    "skills": "???????????????????????",
+    "responsibilities": [
+      "Gestion de Projet Evénementiel",
+      "Concept & contenu du site web de la soirée de lancement",
+      "Coordination avec l'équipe design et développement",
+      "Développement des supports marketing & commerciaux On & Off",
+      "Event planning. Event Management.",
+      "Rebranding",
+      "Développement des communautés"
+    ],
+    "tags": ["stage de fin d'étude"]
+  },
+
+  {
+    "id": "Harveys",
+    "jobtitle": "Senior Salesperson",
+    "workplace": "Harvey Norman",
+    "sector": "retail",
+    "dates": "Aug 2010 - Jan 2011",
+    "location": "XXXXAUSTRALIA FLAGXXXX",
+    "description": "20h/semaine, visa étudiant, pendant les cours",
+    "skills": "???????????????????????",
+    "responsibilities": [
+      "Assistance au consommateur, vente",
+      "Gestion des stocks et commandes",
+      "Fonctionnement en équipe (gestion de l'information)"
+    ],
+    "tags": ["in English"]
+  },
+
+  {
+    "id": "altazeo",
+    "jobtitle": "Chef de projet e-marketing / conseil, créa",
+    "workplace": "altazeo",
+    "sector": "SS2I",
+    "dates": "2009 - 2010",
+    "location": "Puteaux, IDF",
+    "description": "???????????????????????",
+    "skills": "???????????????????????",
+    "responsibilities": [
+      "Maintenance code",
+      "Affiliation",
+      "DB: usage & maintenance",
+      "Créa Photoshop"
+    ],
+    "tags": []
+  }
+]

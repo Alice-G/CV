@@ -13,57 +13,38 @@ import colors from "../style/colors";
 
 import Pic from "./Pic.jsx";
 
-function SemiCol() {
-  const Punct = styled.span`
-    color: ${colors.color_operator};
-    // color: red;
-  `;
-  return <Punct>{"}"}</Punct>;
-}
+// *************************************
+// ARCHITECTURE
+// *************************************
 
+// TODO something's off with alignment here responsive
 const HeaderContainer = styled.header`
+  // just a box to adjust layout
+
+  padding: 20px;
+  // width: 100%;
+
   display: flex;
-  flex-direction: row-reverse;
 
-  // align-items: center;
-  // justify-content: space-around;
-  //   padding: 10px 0;
-  // color: ${colors.primary};
-  //   background-color: ${colors.light};
-  //   height: 128px;
-  //   width: 100%;
+  // flex-direction: row-reverse;
+  // justify-content: space-between;
 
-  // height: 150px;
-  border: dashed 2px black; // DEV
+  // border: 5px double orange; // DEV
 `;
 
-//   // @media (min-width: 769px) and (max-width: 1199px) {
-//   //    height: 52px;
-//   // }
+const CodeBox = styled.div`
+  // flex-grow: 2; // DEV
 
-//   // @media (min-width: 375px) and (max-width: 768px) {
-//   //    height: 48px;
-//   // }
+  // FIXME Make this smaller but fix wrap on text TODO
+  width: 600px; // DEV DECIDE TODO smaller for smaller screens
 
-//   // @media (max-width: 375px) {
-//   //    height: 43px;
-//   // }
-// `;
-
-const CodeBox = styled.section`
-  //   display: flex;
-
-  flex-grow: 2;
+  padding: 1.3rem;
 
   background-color: ${colors.color_background};
   border-radius: 10px;
-  padding: 1.2rem;
   font-size: 1.1rem;
 
   font-family: "Inconsolata", monospace; // DEV
-
-  // color: ${colors.color_eamp};
-  color: red;
 
   // Extras
   &::after {
@@ -71,7 +52,28 @@ const CodeBox = styled.section`
     content: "}";
     font-size: 1.5rem;
   }
+  // border: dashed 2px turquoise; // DEV
 `;
+
+const PicBox = styled.div`
+  display: flex;
+  align-items: center;
+  margin: auto;
+
+  // border: dashed 2px turquoise; // DEV
+`;
+
+// *************************************
+// CODE BOX
+// *************************************
+
+function SemiCol() {
+  const Punct = styled.span`
+    color: ${colors.color_operator};
+    // color: red;
+  `;
+  return <Punct>{"}"}</Punct>;
+}
 
 const Name = styled.h1`
   color: ${colors.color_class};
@@ -103,16 +105,19 @@ const SubSectionTitle = styled.h2`
     color: ${colors.color_operator};
     content: " {";
   }
+  // border: dashed 2px mediumseagreen; // DEV
 `;
 
 const Line = styled.div`
-  //   display: flex;
+  // display: flex;
+  width: 320px;
 
   color: ${colors.color_attribute};
   &::after {
     content: ";";
     color: ${colors.color_operator};
   }
+  // border: dashed 2px orange; // DEV
 `;
 
 const Operator = styled.span`
@@ -122,7 +127,12 @@ const Operator = styled.span`
 `;
 
 const String = styled.span`
-  //   display: flex;
+  // border: dashed 2px pink; // DEV
+
+  // display: inline-block;
+  // flex-wrap: nowrap;
+  // width: 350px;
+
   color: ${colors.color_string};
 `;
 
@@ -162,8 +172,6 @@ const Colorvariable = styled.span`
 export default function Header() {
   return (
     <HeaderContainer>
-      <Pic />
-
       <CodeBox>
         <Name>Alice_Gayat</Name>
         <Line>
@@ -179,9 +187,9 @@ export default function Header() {
           </a>
         </Line>
         <Line>
-          LinkedIn civil<Operator>:</Operator>
-          <a href="grabber@sssano.net">
-            <Parameter> ccccc</Parameter>
+          LinkedIn Alias<Operator>:</Operator>
+          <a href="https://www.linkedin.com/in/alice-gayat/">
+            <Parameter> alice-gayat</Parameter>
           </a>
         </Line>
 
@@ -190,20 +198,20 @@ export default function Header() {
           <section>
             <Line>
               Français<Operator>:</Operator>
-              <Parameter> Fluent</Parameter>
+              <String> "Bilingue"</String>
             </Line>
             <Line>
               English<Operator>:</Operator>
-              <Parameter> Fluent</Parameter>
+              <String> "Bilingue"</String>
             </Line>
-            <Line>
+            {/* <Line>
               Spanish<Operator>:</Operator>
               <Parameter> Learning</Parameter>
-            </Line>
-            <Line>
+            </Line> */}
+            {/* <Line>
               German<Operator>:</Operator>
               <Parameter> Notions</Parameter>
-            </Line>
+            </Line> */}
             <SemiCol />
           </section>
         </section>
@@ -212,26 +220,19 @@ export default function Header() {
           <SubSectionTitle>__Address</SubSectionTitle>
           <section>
             <Line>
-              Street<Operator>:</Operator>
-              <String> "44, avenue Jean Jaures"</String>
+              Mobilité <Operator>:</Operator>
+              <Colorobject>mobilité</Colorobject>
+              <Colorvariable>.IDF</Colorvariable>
             </Line>
-            <Line>
-              Complement <Operator>:</Operator>
-              <Colorobject>batiment</Colorobject>
-              <Colorvariable>.batiment_A</Colorvariable>
-            </Line>
-            <Line>
-              Ville<Operator>:</Operator>
-              <String>"Rosny-Sous-Bois"</String>
-            </Line>
-            <Line>
-              Postal Code<Operator>:</Operator>
-              <Func>93110</Func>
-            </Line>
+
             <SemiCol />
           </section>
         </section>
       </CodeBox>
+
+      <PicBox>
+        <Pic />
+      </PicBox>
     </HeaderContainer>
   );
 }

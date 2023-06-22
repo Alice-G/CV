@@ -1,13 +1,5 @@
 const colors = {
-  primary: "#CAA5C0", //
-  secondary: "#F6F6F6", //lightgrey
-  light: "#fff",
-  shade: "#E5E5E5",
-  dark: "#000",
-
-  backgroundDark: "#7F7B82", // warm medium grey
-
-  // code snippet
+  // HEADER code snippet
   color_white: "#f3f3e8",
 
   // Oceanic Theme dimmed bg
@@ -20,7 +12,29 @@ const colors = {
   color_class: "#7191df",
   color_eamp: "#4dbdb1",
   color_highlight: "#4f5b66",
+
+  // PAGE
+
+  primary: "#CAA5C0", //
+  secondary: "#F6F6F6", //lightgrey
+  light: "#fff",
+  shade: "#E5E5E5",
+  dark: "#000",
+
+  backgroundDark: "#7F7B82", // warm medium grey
+
+  /// POSSIBLE COLORS FOR SECTION TITLES
+
+  color_sectiontitle: "rgba(211, 194, 173, 0.9)", // Frosted Almonds *
+  // color_sectiontitle: "rgba(220, 196, 148, 0.9)", // Chamomille Tea
+  // color_sectiontitle: "rgba(210, 171, 150, 0.9)", // Salt Water Taffy
+  // color_sectiontitle: "rgba(163, 132, 108, 0.8)", // Sandal *?
+  // color_sectiontitle: "rgba(185, 141, 116, 0.9)", // Presidio Plaza
+  // color_sectiontitle: "rgba(79, 91, 102, 0.9)", // Cigar Smoke
+  // color_sectiontitle: "rgba(77, 91, 51, 0.9)", // Grape Leaves
 };
+
+///
 // #89589b purple
 // #6d8edd blue
 // #b59663 beige

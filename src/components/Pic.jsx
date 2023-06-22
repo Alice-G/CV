@@ -5,22 +5,17 @@ import colors from "../style/colors";
 
 import AliceProfile from "../assets/aliceprofile.jpg";
 
-const PicContainer = styled.header`
-  //   display: flex;
-  //   flex-direction: row;
-  //   align-items: center;
-  //   justify-content: space-between;
-  //   padding: 10px 0;
-  //   color: ${colors.primary};
-  //   background-color: ${colors.light};
-  //   height: 128px;
-  //   width: 100%;
+const PicContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  // border: dashed 2px pink; // DEV
 `;
 const ProfilePic = styled.img`
-  // height: 200px;
-  border-radius: 50%;
+  height: 150px; // DEV
 
-  height: 80px; // DEV
+  border-radius: 50%;
 
   // @media (min-width: 769px) and (max-width: 1199px) {
   //    height: 52px;

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "OC",
+    "sector": "STEM",
+    "institution": "OpenClassrooms",
+    "logo": "https://i.postimg.cc/CzbDrPt1/OC.jpg",
+
+    "img": "url('../assets/schools/OC.jpg')",
+
+    "program": "Développeur Web",
+    "dates": "2022 - 2023",
+    "description": "HTML, CSS, Sass, JavaScript (ES13), React.js",
+    "location": "remote",
+    "tags": []
+  },
+  {
+    "id": "UMich",
+    "sector": "STEM",
+    "institution": "University of Michigan",
+    "logo": "https://media.licdn.com/dms/image/C4E0BAQFGfERBPGurCg/company-logo_100_100/0/1519856309184?e=1695254400&v=beta&t=TOM6awRqwQTHTUoOJlRL1PPUIPreewQ3uVMM8TH-u9A",
+    "program": "Web Design Specialization",
+    "dates": "2018 - 2019",
+    "description": "Online certification completed while working full time",
+
+    "location": "remote",
+    "tags": ["in English"]
+  },
+  {
+    "id": "BSB",
+    "sector": "Business",
+    "institution": "Burgundy School of Business - ESC Dijon",
+    "logo": "https://media.licdn.com/dms/image/C560BAQGy69r-gFg_uw/company-logo_100_100/0/1601886364375?e=1695254400&v=beta&t=6z0vVxTQgQOS30inzwm1fPNqMUHgD3vFjfMP2PHQuR0",
+    "program": "M.Sc. II - Master II of Science",
+    "dates": "2008 - 2014",
+    "description": "Master II, Marketing, management, finance, accounting, company law, entrepreneurship, international trade...",
+    "location": "Dijon",
+    "activities": "Activities and societies: - Membre de Madnesc, organisation du semi-ski. 2 semaines à La Plagne. • Responsable pôle Arts Plastiques au Bureaux des Arts.",
+
+    "host": {
+      "name": "Nathalie Jean",
+      "logo": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg"
+    },
+    "equipments": [
+      "Équipements de base",
+      "Micro-Ondes",
+      "Douche italienne",
+      "Frigo",
+      "WIFI"
+    ],
+    "tags": ["in English", ""]
+  },
+
+  {
+    "id": "HX",
+    "sector": "STEM",
+    "institution": "HarvardX",
+    "logo": "https://i.postimg.cc/PvwZj25S/HX.png",
+    "program": "CS50's Introduction to Computer Science",
+    "dates": "2021",
+    "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "location": "remote",
+
+    "tags": ["in English", "audited"]
+  },
+
+  {
+    "id": "GU",
+    "sector": "Business",
+    "institution": "Griffith University",
+    "logo": "https://i.postimg.cc/dtktySy2/GU1.png",
+    "program": "M.Sc. II - Master II of Science",
+    "dates": "2010 - 2011",
+    "description": "Master II, Business Organizations, International HR, Social Responsibility of the firm.",
+    "location": "Brisbane, Australia",
+
+    "host": {
+      "name": "Nathalie Jean",
+      "logo": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg"
+    },
+    "equipments": [
+      "Équipements de base",
+      "Micro-Ondes",
+      "Douche italienne",
+      "Frigo",
+      "WIFI"
+    ],
+    "tags": ["in English", ""]
+  },
+
+  {
+    "id": "Marie2Champ",
+    "sector": "Business",
+    "institution": "Lycée Marie de Champagne",
+    "logo": "https://i.postimg.cc/5jY8LNS8/LMC.png",
+    "program": "Classe Préparatoire aux Hautes Ecoles de Commerce",
+    "dates": "2005 - 2007",
+    "description": "Analyse Economique et Historique des Sociétés ContemporainesClasse Préparatoire aux Hautes Ecoles de Commerce, Analyse Economique et Historique des Sociétés Contemporaines.",
+    "location": "Troyes",
+    "activities": "Activities and societies: Theatre. Writing.",
+
+    "host": {
+      "name": "Nathalie Jean",
+      "logo": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg"
+    },
+    "equipments": [
+      "Équipements de base",
+      "Micro-Ondes",
+      "Douche italienne",
+      "Frigo",
+      "WIFI"
+    ],
+    "tags": ["in English", ""]
+  }
+]
