@@ -6,6 +6,10 @@ import colors from "../style/colors";
 
 import svgArrow from "../assets/wingArrow.svg";
 
+// *************************************
+// STYLING
+// *************************************
+
 const CollapseContainer = styled.div`
   //   margin: 3%;
   margin: 10px;
@@ -90,6 +94,10 @@ const Content = styled.p`
   //     padding: 24px 11px 11px 11px;
   //   }
 `;
+
+// *************************************
+// FUNCTIONALITY
+// *************************************
 
 function Collapsible(props) {
   const [open, setOPen] = useState(false); // we can chose later to make it open by default

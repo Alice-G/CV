@@ -8,9 +8,11 @@ import Education from "./Education";
 import Experience from "./Experience";
 import ExtraInfo from "./Extras";
 
-// import SpinEffect from "./spineffect";
+import colors from "../style/colors";
 
-// import needle from "../assets/needle.png";
+// *************************************
+// XXXXXXXX
+// *************************************
 
 const MainBitContainer = styled.div`
   display: flex;
@@ -55,46 +57,74 @@ const ChartContainer = styled.div`
   // }
 `;
 
+// Education / Workplaces
 const Container1 = styled.div`
   box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // flex-gap: 10px; // DECIDE
-
-  // padding: 10px; // CHECK in real display conditions
 
   padding-bottom: 20px; // to push down next section DECIDE convert to a flex gap?
 
   // border: 3px dashed deeppink; // DEV
 
-  // @media (min-width: 769px) and (max-width: 1199px) {
-  //   gap: 40px;
-  // }
+  color: blue; // DEV
 
-  // @media (min-width: 375px) and (max-width: 768px) {
-  //   gap: 30px;
-  // }
+  @media (min-width: 769px) and (max-width: 1199px) {
+    color: green; // DEV
+  }
 
-  // @media (max-width: 375px) {
-  //   gap: 15px;
-  // }
+  @media (min-width: 375px) and (max-width: 768px) {
+    color: orange; // DEV
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5px;
+  }
+
+  @media (max-width: 375px) {
+    color: skyblue; // DEV
+
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5px;
+  }
 `;
 
 const C1BoxLong = styled.div`
-  //   display: flex;
   padding-right: 10px; // to space columns out from the inside
 
   // border: 3px dotted indianred; // DEV
 
-  width: 62%;
+  width: 58%;
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    width: 62%;
+  }
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media (max-width: 375px) {
+    width: 80%;
+  }
 `;
 
 const C1BoxSmall = styled.div`
-  // width: 20%;
+  width: 40%;
 
-  width: 37%;
+  @media (min-width: 769px) and (max-width: 1199px) {
+    width: 37%;
+  }
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media (max-width: 375px) {
+    width: 80%;
+  }
 
   // border: 3px dotted cornflowerblue; // DEV
 `;
@@ -108,6 +138,12 @@ const Container2 = styled.div`
 
   // flex-gap: 10px;
 
+  @media (max-width: 768px) {
+    color: orange; // DEV
+    flex-direction: column;
+    align-items: center;
+  }
+
   // border: 3px dashed green; // DEV
 `;
 
@@ -115,16 +151,65 @@ const C2BoxSmall = styled.div`
   //   display: flex;
   width: 30%;
 
+  @media (max-width: 768px) {
+    color: orange; // DEV
+    width: 65%;
+  }
+
   // border: 3px dotted blue; // DEV
 `;
 
 const C2BoxLong = styled.div`
   width: 68%;
+  @media (max-width: 768px) {
+    color: orange; // DEV
+    margin-top: 10px;
+    width: 80%;
+  }
+
   // border: 3px dotted lightsalmon; // DEV
 `;
 
+//TODO do I want the overbox and center styling??
+const Link404Box = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    //   green; // DEV
+    justify-content: left;
+    padding-left: 20px;
+  }
+
+  @media (max-width: 768px) {
+    //   orange; // DEV
+
+    margin-top: 10px;
+  }
+
+  // border: 3px dotted lightsalmon; // DEV
+`;
+
+const Link404 = styled.a`
+  color: ${colors.color_primary08};
+  padding-top: 50px; // TODO
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    padding-top: 20px;
+  }
+
+  @media (max-width: 375px) {
+    padding-top: 10px;
+  }
+
+  // border: 3px dotted DarkSeaGreen; // DEV
+`;
+
 export default function MainBit() {
-  console.log("MainBitloaded");
   return (
     <MainBitContainer>
       <ChartContainer>
@@ -146,6 +231,9 @@ export default function MainBit() {
         </C2BoxSmall>
         <C2BoxLong>
           <ExtraInfo />
+          <Link404Box>
+            <Link404 href="/xyz">Et si le lien n'était pas bon? 🤔</Link404>
+          </Link404Box>
         </C2BoxLong>
       </Container2>
     </MainBitContainer>

@@ -8,6 +8,10 @@ import { Radar } from "react-chartjs-2";
 
 // TODO change padding and shape
 
+// *************************************
+// XXXXXXXX
+// *************************************
+
 // import React from 'react';
 import {
   Chart as ChartJS,

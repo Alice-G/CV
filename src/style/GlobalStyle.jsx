@@ -47,13 +47,14 @@ const StyledGlobalStyle = createGlobalStyle`
 
     body {
       font-family: Montserrat, Arial, sans-serif;
-      font-size: 18px;
+      font-size: 18px; // TODO TODO TODO
       background-color: ${colors.backgroundDark};
       max-width: 1440px;
 
 
-      // HINT
-
+      // *************************************
+      // COLOR SHIFTING BACKGROUND
+      // *************************************
   
       // other choices:#322015, #56453E / #232526 #414345 / #736D78 #322537
 
@@ -97,22 +98,17 @@ const StyledGlobalStyle = createGlobalStyle`
           background-position: 0% 50%;
         }
       }
-    
-      // HINT
 
-
-
-
-
-      
-      // border: 3px dashed deeppink; // DEV
-
-      // for-desktop-up // from FIGMA
+      // for-desktop-up 
         @media (min-width: 1440px) {
           margin: auto;
         }
       
     }
+
+    // h3 {
+    //   font-size: 45px;
+    // }
 `;
 
 export default StyledGlobalStyle;

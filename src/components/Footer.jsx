@@ -1,7 +1,5 @@
 // BLOCK FIXME LEG BUG TODO HINT DEL TEST ASK WEIRD CHECK DEV VALIDATOR
 
-//TODO credit icons <div> Icons made by <a href="https://www.flaticon.com/authors/najmunnahar" title="NajmunNahar"> NajmunNahar </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-
 import React from "react";
 import styled from "styled-components";
 import colors from "../style/colors";
@@ -12,7 +10,10 @@ import email from "../assets/icons/email128.png";
 //TODO remove
 // npm install styled-icons --save
 
-// TODO something's off with alignment here responsive
+// *************************************
+// XXXXXXXX
+// *************************************
+
 const FooterContainer = styled.footer`
   // just a box to adjust layout
 
@@ -21,7 +22,20 @@ const FooterContainer = styled.footer`
 
   align-items: center;
 
-  padding: 30px 20px;
+  padding: 50px 20px;
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    // color: green; // DEV
+    padding: 30px 20px;
+  }
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    // color: orange; // DEV
+  }
+
+  @media (max-width: 375px) {
+    // color: skyblue; // DEV
+  }
 
   // border: 5px double orange; // DEV
 `;
@@ -29,19 +43,41 @@ const FooterContainer = styled.footer`
 const Bye = styled.p`
   font-family: "La Belle Aurore", cursive;
   font-size: 40px;
+  text-align: center;
 
-  color: ${colors.color_sectiontitle}; // TODO
+  color: ${colors.color_sectiontitle};
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    font-size: 35px;
+  }
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 25px;
+  }
 
   // border: dashed 2px pink; // DEV
 `;
 
-// DEV del this? DEL
 const IconBox = styled.a`
   display: flex;
   flex-direction: row;
   gap: 100px;
 
   //TODO align self for 1st icon
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+  }
 `;
 
 const Link = styled.a`
@@ -56,8 +92,18 @@ const IconEmail = styled.img.attrs(({ src }) => ({
 }))`
   width: 70px;
   opacity: 0.7; //DEV DECIDE
+  //TODO font-size 10px for alt text?
 
   padding-top: 10px; // to align
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    color: orange; // DEV
+    width: 50px;
+  }
+
+  @media (max-width: 375px) {
+    width: 45px;
+  }
 `;
 
 const IconLinkedIn = styled.img.attrs(({ src }) => ({
@@ -66,6 +112,14 @@ const IconLinkedIn = styled.img.attrs(({ src }) => ({
 }))`
   width: 70px;
   opacity: 0.7; //DEV DECIDE
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    width: 50px;
+  }
+
+  @media (max-width: 375px) {
+    width: 45px;
+  }
 `;
 
 export default function Footer() {

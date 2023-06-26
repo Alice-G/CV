@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 import Alice from "../assets/404 page/Alice.png";
 import Cheshire from "../assets/404 page/Cheshire.png";
+import colors from "../style/colors";
+
+// *************************************
+// XXXXXXXX
+// *************************************
 
 const ErrorContainer = styled.div`
   box-sizing: border-box;
@@ -13,22 +18,23 @@ const ErrorContainer = styled.div`
 
   padding-top: 50px;
   gap: 50px;
-  border: 3px dotted blue; // DEV
+  // border: 3px dotted blue; // DEV
 
   @media (min-width: 769px) and (max-width: 1199px) {
     padding-top: 25px;
     gap: 30px;
-    border: 3px dotted green; // DEV
+    // border: 3px dotted green; // DEV
   }
 
   @media (min-width: 375px) and (max-width: 768px) {
-    gap: 30px;
-    border: 3px dotted orange; // DEV
+    padding-top: 20px;
+    gap: 15px;
+    // border: 3px dotted orange; // DEV
   }
 
   @media (max-width: 375px) {
-    gap: 15px;
-    border: 3px dotted skyblue; // DEV
+    gap: 10px;
+    // border: 3px dotted skyblue; // DEV
   }
 `;
 
@@ -47,12 +53,12 @@ const Title = styled.h1`
 
   @media (min-width: 375px) and (max-width: 768px) {
     font-size: 96px;
-    // line-height: 130px; // TODO
+    line-height: 100px;
   }
 
   @media (max-width: 375px) {
     font-size: 96px;
-    // line-height: 130px; // TODO
+    line-height: 96px; // TODO
   }
 `;
 
@@ -71,11 +77,13 @@ const OopsPic = styled.img`
 
   // @media (min-width: 375px) and (max-width: 768px) {
   //   orange; // DEV
+  width: 230px;
 
   // }
 
   // @media (max-width: 375px) {
   //    skyblue; // DEV
+  width: 180px;
 
   // }
 `;
@@ -97,12 +105,12 @@ const ErrorText = styled.p`
   }
 
   @media (min-width: 375px) and (max-width: 768px) {
-    font-size: 22px;
+    font-size: 20px;
     padding: 0;
   }
 
   @media (max-width: 375px) {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0;
   }
 `;
@@ -122,48 +130,80 @@ const Box = styled.div`
 
   @media (max-width: 375px) {
     //
+    display: flex;
+    flex-direction: column;
   }
 `;
 
+const Box2 = styled.span`
+margin-top: -3px;
+
+
+blue; // DEV
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  green; // DEV
+  // margin-top: -5px; // TODO do that instead of line height now
+  
+  }
+  
+  @media (min-width: 375px) and (max-width: 768px) {
+    orange; // DEV
+  
+  }
+
+  @media (max-width: 375px) {
+    //    skyblue; // DEV
+    display: flex;
+    flex-direction: row;
+  }
+  z-index: 7;
+  // border: 3px dotted yellow; // DEV
+`;
+
 const Text = styled.span`
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 24px;
+  color: ${colors.color_primary08};
+  font-size: 20px;
+  line-height: 20px;
 
   // blue; // DEV
 
-  // @media (min-width: 769px) and (max-width: 1199px) {
-  //   green; // DEV
-  font-size: 18px;
-  line-height: 20px;
-
-  // }
-
-  // @media (min-width: 375px) and (max-width: 768px) {
-  //   orange; // DEV
-
-  // }
-
-  // @media (max-width: 375px) {
-  //    skyblue; // DEV
-
-  // }
-`;
-
-const ErrorBacklink = styled.a`
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 24px;
-  line-height: 24px;
-
-  font-family: "IM Fell DW Pica", serif;
-  font-style: italic;
-
   @media (min-width: 769px) and (max-width: 1199px) {
+    //   green; // DEV
     font-size: 18px;
     line-height: 20px;
   }
 
+  @media (min-width: 375px) and (max-width: 768px) {
+    //   orange; // DEV
+    font-size: 16px;
+    // line-height: 20px;
+  }
+
+  @media (max-width: 375px) {
+    //    skyblue; // DEV
+  }
+`;
+
+const ErrorBacklink = styled.a`
+  color: ${colors.color_primary08};
+  font-size: 23px;
+  line-height: 25px;
+
+  font-family: "IM Fell DW Pica", serif;
+  font-style: italic;
+
+  // z-index: 7;
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    //green
+    font-size: 22px;
+    line-height: 26px;
+  }
+
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 20px;
+    line-height: 20px;
   }
 `;
 
@@ -182,10 +222,18 @@ const CheshireCat = styled.img`
 
   @media (min-width: 375px) and (max-width: 768px) {
     //
+    margin-top: -13px;
+    margin-left: -95px;
+    width: 350px;
   }
 
   @media (max-width: 375px) {
     //
+
+    margin: 0;
+    margin-top: -30px;
+    margin-right: -20px;
+    width: 280px;
   }
 `;
 
@@ -197,8 +245,10 @@ export default function Error404() {
       <ErrorText>Oups! La page que vous demandez n'existe pas.</ErrorText>
       <Box>
         <Text>Le CV est </Text>
-        <ErrorBacklink href="/">&nbsp;par ici&nbsp;</ErrorBacklink>
-        <Text>!</Text>
+        <Box2>
+          <ErrorBacklink href="/">&nbsp;par ici&nbsp;</ErrorBacklink>
+          <Text>!</Text>
+        </Box2>
         <CheshireCat src={Cheshire} alt="Cheshire Cat pointing"></CheshireCat>
       </Box>
     </ErrorContainer>

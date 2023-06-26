@@ -25,22 +25,34 @@
 
 //
 
-// blue; // DEV
+// color: blue; // DEV
 
 // @media (min-width: 769px) and (max-width: 1199px) {
-//   green; // DEV
+//   color: green; // DEV
 
 // }
 
 // @media (min-width: 375px) and (max-width: 768px) {
-//   orange; // DEV
+//   color: orange; // DEV
 
 // }
 
 // @media (max-width: 375px) {
-//    skyblue; // DEV
+//   color: skyblue; // DEV
 
 // }
+
+// BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK
+// BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK
+
+// color: ${colors.color_primary08};
+
+// BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK
+// BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK
+
+// *************************************
+// ARCHITECTURE
+// *************************************
 
 // BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK
 // BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK

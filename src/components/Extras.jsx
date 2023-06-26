@@ -5,11 +5,11 @@
 
 import styled from "styled-components";
 import colors from "../style/colors";
-// import Chart from "./Chart";
-// import Hobbies from "./Hobbies";
-// import Education from "./Education";
-// import Experience from "./Experience";
-// import Flat from "./Education copy";
+import fonts from "../style/fonts";
+
+// *************************************
+// XXXXXXXX
+// *************************************
 
 const ExtraInfoOutterContainer = styled.div`
   padding: 5px; // ?? DEV
@@ -23,15 +23,19 @@ const ExtraInfoContainer = styled.div`
   display: flex;
 
   justify-content: space-evenly;
-  // gap: 10px;
+  gap: 10px;
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   // border: 3px dotted yellow; //DEV
 `;
 
-const SectionTitle = styled.h3`
-  font-family: "IM Fell DW Pica", serif;
+const SectionTitle = styled.h2`
+  font-family: ${fonts.font_sectiontitle}, serif;
   font-style: italic;
-
   font-size: 28px; // DEV
 
   // border: 3px dotted brown; // DEV
@@ -43,7 +47,9 @@ const LanguageContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 40%;
+  @media (min-width: 769px) {
+    width: 40%;
+  }
 
   // border: 5px double pink; //DEV
 `;
@@ -52,14 +58,27 @@ const SoftwaresContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 60%;
-
   // border: 5px double green; //DEV
 `;
 
-const Title = styled.h2`
-  font-size: 15px; // TODO
-  color: rgba(255, 255, 255, 0.8); // TODO
+const Title = styled.h3`
+  color: ${colors.color_primary08};
+
+  padding-bottom: 5px;
+
+  width: 100%;
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 17px;
+  }
 
   // border: 3px dotted saddlebrown; //DEV
 `;
@@ -68,6 +87,10 @@ const ListContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    flex-direction: column;
+  }
 
   // border: 3px dotted hotpink; //DEV
 `;
@@ -85,22 +108,29 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: 13px; // DEV
-  color: rgba(255, 255, 255, 0.8); // TODO // DEV
+  color: ${colors.color_primary08};
   list-style-type: circle;
+  // font-size: 18px; // DEV DEL
+  line-height: 22px;
+
+  @media (min-width: 375px) and (max-width: 1199px) {
+    // //   green; // DEV
+    // orange; // DEV
+
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 375px) {
+    //    skyblue; // DEV
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  // TODO at 570px it gets too narrow for two side by side columns
 
   // border: 3px dotted brown; // DEV
 `;
-
-// const XXXXX1 = styled.div`
-
-//   border: 3px dotted saddlebrown;
-// `;
-
-// const XXXXX2 = styled.div`
-
-//   border: 3px dotted #cadetblue;
-// `;
 
 function ExtraInfo() {
   return (
@@ -128,7 +158,7 @@ function ExtraInfo() {
         </LanguageContainer>
 
         <SoftwaresContainer>
-          <Title>Softwares, APIs and Services //CHECK///</Title>
+          <Title>Softwares, APIs and Services</Title>
           <ListContainer>
             <List>
               <ListItem>LightHouse</ListItem>
@@ -140,8 +170,8 @@ function ExtraInfo() {
 
             <List>
               <ListItem>Code Validators</ListItem>
+              <ListItem>Codepen, jsbin, sandboxes</ListItem>
               <ListItem>Git-GitHub</ListItem>
-              <ListItem>Codepen, others XXXX TODO</ListItem>
               <ListItem>Redmine</ListItem>
               <ListItem>Salesforce (admin)</ListItem>
               <ListItem>Bureautique</ListItem>

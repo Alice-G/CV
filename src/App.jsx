@@ -7,7 +7,6 @@ import { Route, Routes } from "react-router-dom";
 
 // import { ErrorBoundary } from "react-error-boundary";
 import ErrorBoundary from "./ErrorBoundary";
-// does it do something??? //CHECK
 
 // TODO move Main Bit To Here.
 

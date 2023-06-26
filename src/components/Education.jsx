@@ -10,14 +10,17 @@ import education from "../data/education.json";
 
 import Collapse from "./Collapse";
 
-// TODO
-import { BsFillMortarboardFill } from "react-icons/bs";
-import { BsMortarboard } from "react-icons/bs";
-import { GiGears } from "react-icons/gi";
-
 // TODO make sure tags near UMich don't be too high
 // TODO look at styling and themes
 //
+
+// *************************************
+// XXXXXXXX
+// *************************************
+
+// *************************************
+// XXXXXXXX
+// *************************************
 
 const EducationContainer = styled.div`
   display: flex;
@@ -147,7 +150,7 @@ const SchoolBody = styled.div`
   //   border: 2px dotted orange; // DEV
 `;
 
-const SchooExtralInfo = styled.div`
+const SchoolExtralInfo = styled.div`
   display: flex;
   flex-direction: row;
   //   justify-content: space-bet // DEVween;
@@ -264,14 +267,14 @@ function Education() {
             {/* === "in English" ? "green" : "grey"}; */}
 
             <SchoolBody>
-              <SchooExtralInfo>
+              <SchoolExtralInfo>
                 <SchoolDates>{listData.dates}</SchoolDates>
                 <Tags>
                   {listData.tags.map((s) => (
                     <Tag key={s}>{s}</Tag>
                   ))}
                 </Tags>
-              </SchooExtralInfo>
+              </SchoolExtralInfo>
               <Collapse
                 title="more"
                 // text=

@@ -15,6 +15,19 @@ const colors = {
 
   // PAGE
 
+  color_primary1: "rgba(255, 255, 255, 1)",
+  color_primary09: "rgba(255, 255, 255, 0.9)",
+  color_primary08: "rgba(255, 255, 255, 0.8)",
+  color_primary07: "rgba(255, 255, 255, 0.7)",
+  color_primary06: "rgba(255, 255, 255, 0.6)",
+  color_primary05: "rgba(255, 255, 255, 0.5)",
+  color_primary04: "rgba(255, 255, 255, 0.4)",
+  color_primary03: "rgba(255, 255, 255, 0.3)",
+  color_primary02: "rgba(255, 255, 255, 0.2)",
+  color_primary01: "rgba(255, 255, 255, 0.1)",
+
+  // color: rgba(255, 255, 255, 0.8);
+
   primary: "#CAA5C0", //
   secondary: "#F6F6F6", //lightgrey
   light: "#fff",

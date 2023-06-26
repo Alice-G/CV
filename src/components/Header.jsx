@@ -217,12 +217,17 @@ export default function Header() {
         </section>
 
         <section>
-          <SubSectionTitle>__Address</SubSectionTitle>
+          <SubSectionTitle>__Location</SubSectionTitle>
           <section>
             <Line>
               Mobilité <Operator>:</Operator>
               <Colorobject>mobilité</Colorobject>
               <Colorvariable>.IDF</Colorvariable>
+            </Line>
+
+            <Line>
+              Télétravail OK <Operator>:</Operator>
+              <Func> true</Func>
             </Line>
 
             <SemiCol />

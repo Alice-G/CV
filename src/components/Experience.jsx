@@ -10,16 +10,12 @@ import experience from "../data/experience.json";
 
 import Collapse from "./Collapse";
 
-// TODO
-import { BsFillMortarboardFill } from "react-icons/bs";
-import { BsMortarboard } from "react-icons/bs";
-import { GiGears } from "react-icons/gi";
-
-// TODO make sure tags near UMich don't be too high
-// TODO look at styling and themes
 // TODO list of responsibilities
 // TODO Malakoff IDF small screen
-// TODO rename components
+
+// *************************************
+// XXXXXXXX
+// *************************************
 
 const XPContainer = styled.div`
   display: flex;
@@ -34,7 +30,22 @@ const XPContainer = styled.div`
   //   margin-bottom: 10px;
   // }
 
-  // width: 500px; // DEV
+  // color: blue; // DEV
+
+  // @media (min-width: 769px) and (max-width: 1199px) {
+  //   color: green; // DEV
+
+  // }
+
+  // @media (min-width: 375px) and (max-width: 768px) {
+  //   color: orange; // DEV
+
+  // }
+
+  // @media (max-width: 375px) {
+  //   color: skyblue; // DEV
+
+  // }
 
   // border: 3px dotted yellow; // DEV
 `;
@@ -76,18 +87,6 @@ const XPHeader = styled.div`
   border-radius: 10px;
 `;
 
-const TitleSection = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  // Trying to fill space without crunching image
-  //   flex-grow: 1;
-  //   flex-basis: 500px; // TEST
-  width: 100%; // this seems to work if there's an actual image
-  //
-  //   border: 2px dashed pink; // DEV
-`;
-
 const JobInfo = styled.div`
   display: flex;
   flex-direction: row;
@@ -99,14 +98,14 @@ const JobTitle = styled.h3`
   //   font-weight: bold;
 `;
 
-const Program = styled.h4`
+const Firm = styled.h4`
   font-size: 14px;
   //   font-weight: bold; // DECIDE ???
 
-  //   color: blue; // DEV
+  // color: blue; // DEV
 `;
 
-const FieldofStudy = styled.p`
+const Sector = styled.p`
   border-radius: 7px;
   padding: 2px 6px;
   font-size: 12px;
@@ -132,20 +131,20 @@ const JobLocation = styled.p`
   color: rgba(255, 255, 255, 0.7);
 `;
 
-const SchoolBody = styled.div`
+const XPBody = styled.div`
   margin-top: 10px;
   margin-right: 10px;
-  //   border: 2px dotted orange; // DEV
+  // border: 2px dotted orange; // DEV
 `;
 
-const SchooExtralInfo = styled.div`
+const XPExtralInfo = styled.div`
   display: flex;
   flex-direction: row;
   //   justify-content: space-bet // DEVween;
   // DEV
 `;
 
-const SchoolDates = styled.div`
+const XPDates = styled.div`
   font-size: 13px;
   min-width: 100px;
   // color: dimgray;
@@ -234,6 +233,10 @@ const Button = styled.button`
   border: 2px solid ${(props) => props.theme.main};
 `;
 
+// *************************************
+// XXXXXXXX
+// *************************************
+
 // We are passing a default theme for Buttons that arent wrapped in the ThemeProvider
 Button.defaultProps = {
   theme: {
@@ -254,7 +257,7 @@ function Education() {
       <XPSectionTitle>Expérience</XPSectionTitle>
 
       {experience.map((listData) => {
-        console.log(listData);
+        // console.log(listData);
         return (
           <XPCard key={listData.id}>
             <div></div>
@@ -268,21 +271,21 @@ function Education() {
               </JobInfo>
 
               <JobInfo>
-                <Program>{listData.workplace}</Program>
-                <FieldofStudy>{listData.sector}</FieldofStudy>
+                <Firm>{listData.workplace}</Firm>
+                <Sector>{listData.sector}</Sector>
               </JobInfo>
             </XPHeader>
 
-            <SchoolBody>
-              <SchooExtralInfo>
-                <SchoolDates>{listData.dates}</SchoolDates>
+            <XPBody>
+              <XPExtralInfo>
+                <XPDates>{listData.dates}</XPDates>
 
                 <Tags>
                   {listData.tags.map((s) => (
                     <Tag key={s}>⇒{s}</Tag>
                   ))}
                 </Tags>
-              </SchooExtralInfo>
+              </XPExtralInfo>
               <Collapse
                 title="Responsibilities"
                 // text=
@@ -291,7 +294,7 @@ function Education() {
                 ))}
                 alt="Collapsible section with list of responsiblities"
               />
-            </SchoolBody>
+            </XPBody>
           </XPCard>
         );
       })}
