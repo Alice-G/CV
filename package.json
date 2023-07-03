@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://myusername.github.io/my-app",
   "dependencies": {
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.4",
