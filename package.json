@@ -2,7 +2,9 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://myusername.github.io/my-app",
+  "homepage": "https://cheshirealice.github.io/my-app",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "dependencies": {
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.4",
@@ -14,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "chart.js": "^4.3.0",
+    "gh-pages": "^5.0.0",
     "i18next": "^22.5.0",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.2.1",
