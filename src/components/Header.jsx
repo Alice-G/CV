@@ -141,6 +141,11 @@ const Parameter = styled.span`
   color: ${colors.color_property};
 `;
 
+const FuncPhone = styled.a`
+  //   display: flex;
+  color: ${colors.color_func};
+`;
+
 const Func = styled.span`
   //   display: flex;
   color: ${colors.color_func};
@@ -178,17 +183,18 @@ export default function Header() {
           Age<Operator>:</Operator> <Parameter>36</Parameter>
         </Line>
         <Line>
-          Phone<Operator>:</Operator> <Func>+33 0625277945</Func>
+          Phone<Operator>:</Operator>{" "}
+          <FuncPhone href="tel:+33 0625277945">+33 0625277945</FuncPhone>
         </Line>
         <Line>
           Email<Operator>:</Operator>
-          <a href="so.gayat@gmail.com">
+          <a href="mailto:so.gayat@gmail.com">
             <Parameter> so.gayat@gmail.com</Parameter>
           </a>
         </Line>
         <Line>
           LinkedIn Alias<Operator>:</Operator>
-          <a href="https://www.linkedin.com/in/alice-gayat/">
+          <a href="https://www.linkedin.com/in/alice-gayat/" target="_blank">
             <Parameter> alice-gayat</Parameter>
           </a>
         </Line>

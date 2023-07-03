@@ -4,6 +4,7 @@ import React from "react";
 
 import styled from "styled-components";
 import colors from "../style/colors";
+import fonts from "../style/fonts";
 import { Radar } from "react-chartjs-2";
 
 // TODO change padding and shape
@@ -26,24 +27,141 @@ import {
 
 // import AliceProfile from "../assets/aliceprofile.jpg";
 
-const ComponentContainer = styled.section`
+const TopLevelContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
   width: 100%;
 
+  // background-color: rgb(193, 193, 193, 0.2);
+  // border-radius: 20px;
+
+  // HINT HINT HINT HINT HINT HINT
+  // HINT HINT HINT HINT HINT HINT
+  // HINT HINT HINT HINT HINT HINT
+
+  border: 2px double cadetblue; // DEV
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    border: 2px double green; // DEV
+    // width: 80%;  NO
+    // padding: 0 20px;
+  }
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    border: 2px double orange; // DEV
+    // width: 500px;
+    width: 85%;
+  }
+
+  @media (max-width: 375px) {
+    border: 2px double skyblue; // DEV
+  }
+`;
+
+const SectionTitle = styled.h3`
+  font-family: ${fonts.font_sectiontitle}, serif;
+  font-style: italic;
+
+  font-size: 28px;
+
+  margin: 30px 10px 10px 10px;
+
+  // border: 3px dotted brown; // DEV
+
+  color: ${colors.color_sectiontitle}; // DEV
+
+  // TODO
+  // align self padding left or margin
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 24px;
+  }
+`;
+
+// HINT HINT HINT HINT HINT
+// HINT HINT HINT HINT HINT
+// HINT HINT HINT HINT HINT
+
+// chart sheer white background
+const ComponentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: rgb(193, 193, 193, 0.2);
   border-radius: 20px;
 
-  // border: 2px solid green; // DEV
+  // padding: 0 50px;
+
+  width: 80%;
+
+  border: 3px dashed cadetblue; // DEV
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    border: 2px dashed green; // DEV
+    //
+  }
+
+  @media (min-width: 571px) and (max-width: 768px) {
+    border: 2px dashed orange; // DEV
+    padding: 0 20px;
+  }
+
+  @media (min-width: 376px) and (max-width: 570px) {
+    border: 2px dashed indianred; // DEV
+
+    padding: 0 20px;
+  }
+
+  @media (max-width: 375px) {
+    border: 2px dashed skyblue; // DEV
+  }
 `;
 
 const ChartContainer = styled.div`
-  height: 700px; // DECIDE with responsive issues??
-  width: 720px;
+  height: 700px; // careful with responsive adjustments, only way to center the chart
 
-  // border: 5px dotted blue; // DEV
+  // border: 3px dotted blue; // DEV
+
+  // HINT HINT HINT HINT HINT HINT
+  // HINT HINT HINT HINT HINT HINT
+  // HINT HINT HINT HINT HINT HINT
+
+  border: 3px dotted orange; // DEV
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    border: 3px dotted cadetblue; // DEV
+    width: 600px;
+  }
+
+  @media (min-width: 571px) and (max-width: 768px) {
+    border: 3px dotted pink; // DEV
+
+    width: 550px;
+  }
+
+  @media (min-width: 376px) and (max-width: 570px) {
+    border: 3px dotted skyblue; // DEV
+
+    // HINT
+    // HINT
+
+    width: 470px;
+    height: 460px;
+  }
+
+  @media (max-width: 375px) {
+    width: 300px;
+    height: 350px;
+
+    border: 3px dotted green; // DEV
+  }
 `;
 
 const Note = styled.p`
@@ -82,7 +200,9 @@ ChartJS.register(
 // Chart.defaults.font.size = 36; // FIXME nope
 
 const options = {
-  // maintainAspectRatio: true, // Add to prevent default behaviour of full-width/height CHECK
+  responsive: true,
+
+  maintainAspectRatio: true, // Add to prevent default behaviour of full-width/height CHECK
   layout: {
     padding: {
       left: 5,
@@ -122,16 +242,16 @@ const options = {
     },
     tooltip: {
       // hover legend
-      enabled: false, // CHECK THAT THIS WORKED TODO
+      enabled: false, // looks like it worked
 
-      titleColor: "blue", // DEV
-      backgroundColor: "#fff", // DEV
+      // titleColor: "blue", // DEV
+      // backgroundColor: "#fff", // DEV
       // titleFont {} // DEV
-      bodyColor: "red", // DEV
+      // bodyColor: "red", // DEV
       // footerColor: "green", // CHECK who??
       // displayColors: true, // does not work DEV
-      borderColor: "orange", // DEV
-      borderWidth: 1, // DEV
+      // borderColor: "orange", // DEV
+      // borderWidth: 1, // DEV
     },
   },
   scales: {
@@ -139,12 +259,11 @@ const options = {
       pointLabels: {
         // names of skills on chart
         color: "rgba(255,255,255,0.7)", // DECIDE
-        // showLabelBackdrop: true, // FIXME nope
 
         font: {
           size: 16, // Why does this completely fuck the padding?
-          // fontColor: "red", // FIXME nope
-          family: "Inconsolata", // TODO
+
+          // family: "Inconsolata", // better not because chart sucks at responsivity
         },
       },
       ticks: {
@@ -209,15 +328,19 @@ export const data = {
 
 export default function Chart() {
   return (
-    <ComponentContainer>
-      <ChartContainer>
-        <Radar data={data} options={options} />
-      </ChartContainer>
-      {/* <Note>Click on Legend to Hide/Show specific data</Note> */}
-      <Note>
-        Cliquez sur les éléments de la légende pour masquer/afficher leurs
-        données respectives
-      </Note>
-    </ComponentContainer>
+    <TopLevelContainer>
+      <SectionTitle>Compétences</SectionTitle>
+
+      <ComponentContainer>
+        <ChartContainer>
+          <Radar data={data} options={options} />
+        </ChartContainer>
+        {/* <Note>Click on Legend to Hide/Show specific data</Note> */}
+        <Note>
+          Cliquez sur les éléments de la légende pour masquer/afficher leurs
+          données respectives
+        </Note>
+      </ComponentContainer>
+    </TopLevelContainer>
   );
 }

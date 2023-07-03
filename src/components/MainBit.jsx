@@ -4,6 +4,7 @@
 import styled from "styled-components";
 import Chart from "./Chart";
 import Hobbies from "./Hobbies";
+import Hobbies2 from "./Hobbies2";
 import Education from "./Education";
 import Experience from "./Experience";
 import ExtraInfo from "./Extras";
@@ -38,9 +39,11 @@ const MainBitContainer = styled.div`
 `;
 
 const ChartContainer = styled.div`
-  // width: 100%;
+  width: 100%;
+
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
   // border: 5px dotted indianred; // DEV
 
@@ -151,12 +154,22 @@ const C2BoxSmall = styled.div`
   //   display: flex;
   width: 30%;
 
-  @media (max-width: 768px) {
-    color: orange; // DEV
-    width: 65%;
+  @media (min-width: 769px) and (max-width: 1199px) {
+    width: 37%;
+    // border: 3px dotted green; // DEV
   }
 
-  // border: 3px dotted blue; // DEV
+  @media (min-width: 375px) and (max-width: 768px) {
+    // border: 3px dotted orange; // DEV
+    width: 80%;
+  }
+
+  @media (max-width: 375px) {
+    width: 85%;
+    // border: 3px dotted skyblue; // DEV
+  }
+
+  // border: 3px dotted cadetblue; // DEV
 `;
 
 const C2BoxLong = styled.div`
@@ -236,6 +249,9 @@ export default function MainBit() {
           </Link404Box>
         </C2BoxLong>
       </Container2>
+      <div>
+        <Hobbies2 />
+      </div>
     </MainBitContainer>
   );
 }

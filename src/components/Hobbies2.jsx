@@ -65,54 +65,40 @@ const jello = keyframes`
 }
 `;
 
-// Legend Box Enter
-// const fadein = keyframes`
+const fadeOutDown = keyframes`
+0% {
+  opacity: 1;
+  transform: translateY(0);
+}
+100% {
+  opacity: 0;
+  transform: translateY(20px);
+} 
+  `;
 
-// from {
-//   opacity: 0;
-//   }
-//   to {
-//   opacity: 1;
-//   }
-//   }
-// }
-// `;
-// https://tools.webdevpuneet.com/css-animation-generator/
+// color: hotpink;
 
-// Legend Box Leave
-// const fadedownout = keyframes`
-//    from {
-//    opacity: 1;
-//    }
-//     to {
-//     opacity: 0;
-//     -webkit-transform: translate3d(0, 100%, 0);
-//     transform: translate3d(0, 100%, 0);
-//     }
-//     }
-// `;
+// animation-name: ${fadeOutDown};
+// animation-duration: 0.5s;
+// animation-iteration-count: 1;
+
+// transition-timing-function: ease-in;
 
 const Bloop = styled.div`
   height: 80px;
   width: 80px;
   background-color: cadetblue;
 
-  // -webkit-animation-name: fadeOutDown;
-  // animation-name: fadeOutDown;
-  // -webkit-animation-duration: 1s;
-  // animation-duration: 1s;
-  // -webkit-animation-fill-mode: both;
-  // animation-fill-mode: both;
+  // TODO I need to ADD this dynamically onmouseleave to TextContainerBox
 
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  &:hover {
+    border: 2px dotted hotpink;
 
-  &:not(:hover) {
-    color: blue;
+    animation-name: ${fadeOutDown};
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+
+    transition-timing-function: ease-in;
   }
 `;
 
@@ -180,12 +166,8 @@ const SectionTitle = styled.h3`
 
   color: ${colors.color_sectiontitle}; // DEV
 
-  @media (min-width: 375px) and (max-width: 768px) {
-    font-size: 26px;
-  }
-
   @media (max-width: 375px) {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   // border: 3px dotted brown; // DEV
@@ -231,14 +213,11 @@ const HoverIconBox = styled.div`
   }
 
   &:hover {
-    color: hotpink;
-
     animation-name: ${jello};
     animation-duration: 0.5s;
     animation-iteration-count: 1;
 
-    transition-timing-function: ease-out; // TEST check how do I check if ease out works
-    // transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+    transition-timing-function: ease-out;
   }
 `;
 
@@ -270,16 +249,10 @@ const TextContainerBox = styled.div`
   animation-fill-mode: both;
 `;
 
+// TODO FIXME BUG
 const ContentContainer = styled.div`
-  // TODO FIXME BUG
   height: 70px;
-  // height: 100%: // this does not work and makes the border disappear
-
-  // object-fit: fill; // FIXME no effect
-  // object-fit: contain;
-  // object-fit: cover;
-  // object-fit: scale-down;
-  // object-fit: none;
+  // width: 100%: // this does not work and makes the border disappear
 
   border: 3px dotted #9933ff; // purple  DEV
 
@@ -297,14 +270,21 @@ const List = styled.ul`
 `;
 
 const ListTitle = styled.h6`
-  font-size: 0.8em;
-  font-weight: 500;
+  color: white; // DEV
+  font-family: ${fonts.font_sectiontitle}; // DECIDE
+  font-style: italic; // DECIDE
 
-  // background-color: rgba(139, 0, 0, 0.5); // DEV brown
+  // font-size: 0.8em;
+  font-size: 1em;
+  font-weight: 500;
 `;
 const ListItem = styled.div`
+  color: white; // DEV
+  // font-family: ${fonts.font_sectiontitle}; // DECIDE
+  // font-style: italic; // DECIDE
+
   font-size: 0.8em;
-  font-weight: 40000:21:0000:36:00☀️Long break!!DeleteTopComplete00:00;
+  font-weight: 400;
   // padding: 0; // DEV does not work
   // margin: 0;// DEV does not work
   line-height: 1em;
@@ -320,7 +300,7 @@ export default function Attempt2() {
   const [open, setOpen] = useState(false); // we can chose later to make it open by default
   const [box, setBox] = useState("");
 
-  const [isHovering, setIsHovering] = useState(false);
+  // const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnters = () => {
     setOpen(true);
@@ -328,7 +308,8 @@ export default function Attempt2() {
   };
 
   function handleMouseLeaves(e) {
-    setOpen(false);
+    // TODO how do I make this fade out THEN disappear with setOpen??
+    setOpen(false); // abrupt
     console.log("leaves: ");
     console.log(e);
   }
@@ -435,6 +416,8 @@ export default function Attempt2() {
         >
           <Icon src={sewing64} alt="thread icon" />
         </HoverIconBox>
+
+        {/* /// HINT HINT HINT  */}
         <HoverIconBox
           onMouseEnter={() => {
             setBox("art");
@@ -486,6 +469,7 @@ export default function Attempt2() {
 
       <IconLegendContainer>
         {/* <Box> */}
+        <Bloop />
         {open && <TextContainerBox>{renderContent()}</TextContainerBox>}
         {/* </Box> */}
       </IconLegendContainer>

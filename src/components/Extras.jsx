@@ -16,6 +16,8 @@ const ExtraInfoOutterContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  // border: 2px dotted cadetblue; // DEV
 `;
 
 const ExtraInfoContainer = styled.div`
@@ -38,9 +40,17 @@ const SectionTitle = styled.h2`
   font-style: italic;
   font-size: 28px; // DEV
 
+  color: ${colors.color_sectiontitle}; // DEV
+
   // border: 3px dotted brown; // DEV
 
-  color: ${colors.color_sectiontitle}; // DEV
+  @media (min-width: 375px) and (max-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 24px;
+  }
 `;
 
 const LanguageContainer = styled.div`

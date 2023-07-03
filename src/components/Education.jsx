@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import styled from "styled-components";
 import colors from "../style/colors";
+import fonts from "../style/fonts";
 
 import education from "../data/education.json";
 
@@ -38,15 +39,24 @@ const EducationContainer = styled.div`
 `;
 
 const EducationSectionTitle = styled.h3`
-  margin: 30px 10px 10px 10px;
-  font-family: "IM Fell DW Pica", serif; // DEV
-  font-style: italic; // DEV
+  font-family: ${fonts.font_sectiontitle}, serif;
+  font-style: italic;
 
-  font-size: 28px; // DEV
+  font-size: 28px;
+
+  margin: 30px 10px 10px 10px;
 
   // border: 3px dotted brown; // DEV
 
   color: ${colors.color_sectiontitle}; // DEV
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 24px;
+  }
 `;
 
 // DECIDE do I want a box shadow here too?

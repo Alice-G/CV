@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import styled from "styled-components";
 import colors from "../style/colors";
+import fonts from "../style/fonts";
 
 import experience from "../data/experience.json";
 
@@ -51,15 +52,24 @@ const XPContainer = styled.div`
 `;
 
 const XPSectionTitle = styled.h3`
-  margin: 30px 10px 10px 10px;
-  font-family: "IM Fell DW Pica", serif; // DEV
-  font-style: italic; // DEV
+  font-family: ${fonts.font_sectiontitle}, serif;
+  font-style: italic;
 
-  font-size: 28px; // DEV
+  font-size: 28px;
+
+  margin: 30px 10px 10px 10px;
 
   // border: 3px dotted brown; // DEV
 
   color: ${colors.color_sectiontitle}; // DEV
+
+  @media (min-width: 375px) and (max-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 24px;
+  }
 `;
 
 const XPCard = styled.div`
@@ -206,8 +216,6 @@ const Responsibilities = styled.span`
     font-size: 18px;
   }
 
-  //     theme={{ main: "royalblue" }
-
   // // medium screens
   // @media (min-width: 375px) and (max-width: 768px) {
   //   font-size: 12px;
@@ -218,38 +226,6 @@ const Responsibilities = styled.span`
   //   font-size: 10px;
   // }
 `;
-
-// TEST
-
-// Define our button, but with the use of props.theme this time
-const Button = styled.button`
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border-radius: 3px;
-
-  /* Color the border and text with theme.main */
-  color: ${(props) => props.theme.main};
-  border: 2px solid ${(props) => props.theme.main};
-`;
-
-// *************************************
-// XXXXXXXX
-// *************************************
-
-// We are passing a default theme for Buttons that arent wrapped in the ThemeProvider
-Button.defaultProps = {
-  theme: {
-    main: "sienna",
-  },
-};
-
-// Define what props.theme will look like
-const theme = {
-  main: "mediumseagreen",
-};
-
-// TEST
 
 function Education() {
   return (
