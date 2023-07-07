@@ -249,9 +249,6 @@ export default function MainBit() {
           </Link404Box>
         </C2BoxLong>
       </Container2>
-      <div>
-        <Hobbies2 />
-      </div>
     </MainBitContainer>
   );
 }
