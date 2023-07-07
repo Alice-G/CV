@@ -1,13 +1,3 @@
-> Your quote looks like this.
-
-1. Item 1
-   - Sub item 1
-
-- Unordered item
-
-_Italics_
-~~Strike Through~~
-
 # Alice's CV
 
 ## This is the online resume for junior dev Alice
@@ -31,12 +21,13 @@ This is where you'll find an unecesarily complex reactJS resume that serves as a
 
 Icons used for this project can be found on Flaticon.
 
-- Thread icon created by Darius Dan
-- Drawing icon created by surang
-- Book icon created by Culmbio
-- DIY icon created by Freepik
-- Play/Pause icon created by Smashicons
-- D20 icon created by Freepik
+- Hobbies section
+  - Thread icon created by Darius Dan
+  - Drawing icon created by surang
+  - Book icon created by Culmbio
+  - DIY icon created by Freepik
+  - Play/Pause icon created by Smashicons
+  - D20 icon created by Freepik
 - Footer
   - Email icon created by Those Icons
   - Linkedin icon created by NajmunNahar
