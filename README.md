@@ -16,13 +16,10 @@ _Italics_
 
 This is where you'll find an unecesarily complex reactJS resume that serves as a way to show that _I can_.
 
-| Find me               | url                            | Plateforme |
-| --------------------- | ------------------------------ | ---------- |
-| Site CV               | https://cv2023-ten.vercel.app/ | vercel     |
-| ----                  | -----                          | -------    |
-| Projects de formation | https://github.com/Alice-G     | GitHub     |
-| ----                  | -----                          | -------    |
-| Projects de formation | -----                          | LinkedIn   |
+| Find me | url | Plateforme |
+| CV website | https://cv2023-ten.vercel.app/ | vercel |
+| Openclassrooms projects | https://github.com/Alice-G | GitHub |
+| Online presence | linkedin.com/in/alice-gayat/ | LinkedIn |
 
 | Me Contacter | Plateforme         |
 | ------------ | ------------------ |
