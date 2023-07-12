@@ -1,14 +1,11 @@
 [
   {
     "id": "BB",
-
     "jobtitle": "Manager",
     "workplace": "Bistro Burger",
+    "location": "Paris",
     "sector": "restauration",
     "dates": "Jul 2018 - Aug 2022",
-    "location": "Paris",
-    "description": "???????????????????????",
-    "skills": "???????????????????????",
     "responsibilities": [
       "Team Coordination",
       "Shift Management",
@@ -23,13 +20,11 @@
     "id": "BIA",
     "jobtitle": "Senior Staff -   Shift Manager",
     "workplace": "Breakfast In America",
+    "location": "Paris",
     "sector": "restauration",
     "dates": "  Jun 2014 - Oct 2018",
-    "location": "Paris",
-    "description": " Team language: English. ???????????????????????",
-    "skills": "???????????????????????",
-    "responsibilities": ["Key Holder", "Shift Management", "Till check "],
-    "tags": ["in english"]
+    "responsibilities": ["Key Holder", "Shift Management", "Till check"],
+    "tags": [" in english"]
   },
 
   {
@@ -37,10 +32,8 @@
     "jobtitle": "Marketing Communication Specialist",
     "workplace": "talkSpirit",
     "sector": "SS2I",
+    "location": "Malakoff",
     "dates": "Jun 2012 - Dec 2012 · 7 mos",
-    "location": "Malakoff - IDF",
-    "description": "???????????????????????",
-    "skills": "???????????????????????",
     "responsibilities": [
       "Gestion de Projet Evénementiel",
       "Concept & contenu du site web de la soirée de lancement",
@@ -50,7 +43,7 @@
       "Rebranding",
       "Développement des communautés"
     ],
-    "tags": ["stage de fin d'étude"]
+    "tags": [" stage de fin d'étude"]
   },
 
   {
@@ -59,7 +52,7 @@
     "workplace": "Harvey Norman",
     "sector": "retail",
     "dates": "Aug 2010 - Jan 2011",
-    "location": "XXXXAUSTRALIA FLAGXXXX",
+    "location": "AUSTRALIA",
     "description": "20h/semaine, visa étudiant, pendant les cours",
     "skills": "???????????????????????",
     "responsibilities": [
@@ -67,7 +60,7 @@
       "Gestion des stocks et commandes",
       "Fonctionnement en équipe (gestion de l'information)"
     ],
-    "tags": ["in English"]
+    "tags": [" in English"]
   },
 
   {
@@ -76,9 +69,7 @@
     "workplace": "altazeo",
     "sector": "SS2I",
     "dates": "2009 - 2010",
-    "location": "Puteaux, IDF",
-    "description": "???????????????????????",
-    "skills": "???????????????????????",
+    "location": "Puteaux",
     "responsibilities": [
       "Maintenance code",
       "Affiliation",

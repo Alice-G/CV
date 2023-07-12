@@ -19,24 +19,20 @@ import Pic from "./Pic.jsx";
 
 // TODO something's off with alignment here responsive
 const HeaderContainer = styled.header`
-  // just a box to adjust layout
-
-  padding: 20px;
-  // width: 100%;
-
+  padding-top: 20px;
   display: flex;
 
-  // flex-direction: row-reverse;
-  // justify-content: space-between;
-
-  // border: 5px double orange; // DEV
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding-bottom: 20px;
+  }
 `;
 
 const CodeBox = styled.div`
-  // flex-grow: 2; // DEV
-
-  // FIXME Make this smaller but fix wrap on text TODO
-  width: 600px; // DEV DECIDE TODO smaller for smaller screens
+  width: 600px;
+  margin: 0 0 20px 20px;
 
   padding: 1.3rem;
 
@@ -52,7 +48,31 @@ const CodeBox = styled.div`
     content: "}";
     font-size: 1.5rem;
   }
+
   // border: dashed 2px turquoise; // DEV
+
+  @media (min-width: 901px) and (max-width: 1199px) {
+    width: 550px;
+  }
+
+  @media (min-width: 769px) and (max-width: 900px) {
+    width: 500px;
+  }
+
+  @media (min-width: 501px) and (max-width: 768px) {
+    width: 450px;
+    margin: 0;
+  }
+
+  @media (min-width: 375px) and (max-width: 500px) {
+    width: 370px;
+    margin: 0;
+  }
+
+  @media (max-width: 375px) {
+    width: 80%;
+    margin: 0;
+  }
 `;
 
 const PicBox = styled.div`
@@ -70,7 +90,6 @@ const PicBox = styled.div`
 function SemiCol() {
   const Punct = styled.span`
     color: ${colors.color_operator};
-    // color: red;
   `;
   return <Punct>{"}"}</Punct>;
 }
@@ -78,7 +97,7 @@ function SemiCol() {
 const Name = styled.h1`
   color: ${colors.color_class};
   font-size: 1.5rem;
-  font-weight: 100; // DEV this is what makes it thin
+  font-weight: 100;
 
   &::before {
     color: ${colors.color_operator};
@@ -88,12 +107,16 @@ const Name = styled.h1`
     color: ${colors.color_operator};
     content: " {";
   }
+
+  @media (max-width: 500px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const SubSectionTitle = styled.h2`
   color: ${colors.color_class};
   font-size: 1.2rem;
-  font-weight: 100; // DEV this is what makes it thin
+  font-weight: 100;
 
   // Extras
 
@@ -106,6 +129,10 @@ const SubSectionTitle = styled.h2`
     content: " {";
   }
   // border: dashed 2px mediumseagreen; // DEV
+
+  @media (max-width: 500px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const Line = styled.div`
@@ -118,6 +145,10 @@ const Line = styled.div`
     color: ${colors.color_operator};
   }
   // border: dashed 2px orange; // DEV
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
 `;
 
 const Operator = styled.span`

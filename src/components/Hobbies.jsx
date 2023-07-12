@@ -123,16 +123,14 @@ const Bloop = styled.div`
 // *******************************************
 
 const TopLevelContainer = styled.div`
-  padding-left: 5px;
-  border: 2px dotted cadetblue; // DEV
+  margin-left: 5px;
+  // border: 2px dotted cadetblue; // DEV
 
   @media (min-width: 571px) and (max-width: 768px) {
     padding: 0;
     margin: auto;
 
     width: 80%;
-
-    border: 2px dotted orange; // DEV
   }
 
   @media (min-width: 376px) and (max-width: 570px) {
@@ -140,8 +138,6 @@ const TopLevelContainer = styled.div`
     margin: auto;
 
     width: 95%;
-
-    border: 2px dotted yellow; // DEV
   }
 
   @media (max-width: 375px) {
@@ -149,8 +145,6 @@ const TopLevelContainer = styled.div`
     margin: auto;
 
     width: 95%;
-
-    border: 2px dotted skyblue; // DEV
   }
 `;
 
@@ -163,22 +157,47 @@ const IconListContainer = styled.div`
   // justif-content: space-between; // DECIDE FIXME why does this not work?
   // justif-content: space-evenly; // DECIDE FIXME why does this not work?
 
-  // DEV
-  // align-items: center;
-
   padding: 5px;
 
-  // height: 200px; // DEV
-  border: 3px dashed pink; // DEV
+  // border: 3px dashed pink; // DEV
+
+  @media (min-width: 970px) and (max-width: 1433px) {
+    // padding: 5px 20px;
+    // column-gap: 50px;
+
+    column-gap: 25px;
+    width: 300px;
+    margin: auto;
+  }
+
+  @media (min-width: 795px) and (max-width: 969px) {
+    padding: 5px 10px;
+    column-gap: 30px;
+  }
+
+  @media (min-width: 667px) and (max-width: 794px) {
+    // padding: 5px 10px;
+    // column-gap: 30px;
+  }
+
+  @media (min-width: 376px) and (max-width: 666px) {
+    column-gap: 25px;
+    width: 300px;
+    margin: auto;
+  }
+
+  @media (min-width: 376px) and (max-width: 430px) {
+    column-gap: 15px;
+    width: 240px;
+    margin: auto;
+  }
 `;
 
 const SectionTitle = styled.h3`
+  color: ${colors.color_sectiontitle}; // DEV
   font-family: ${fonts.font_sectiontitle}, serif;
   font-style: italic;
-
   font-size: 28px; // DEV
-
-  color: ${colors.color_sectiontitle}; // DEV
 
   @media (min-width: 375px) and (max-width: 768px) {
     font-size: 26px;
@@ -191,7 +210,6 @@ const SectionTitle = styled.h3`
   // border: 3px dotted brown; // DEV
 `;
 
-// TODO TODO TODO TODO adjust size padding of icons with this and component below
 const HoverIconBox = styled.div`
   display: flex;
   justify-content: space-around;
@@ -199,7 +217,7 @@ const HoverIconBox = styled.div`
 
   border-radius: 50%;
 
-  background-color: rgba(255, 255, 255, 0.85); // DEV // TODO
+  background-color: ${colors.color_primary08}; // DEV // TODO
 
   height: 60px;
   width: 60px;
@@ -231,7 +249,7 @@ const HoverIconBox = styled.div`
   }
 
   &:hover {
-    color: hotpink;
+    // color: hotpink; // TEST
 
     animation-name: ${jello};
     animation-duration: 0.5s;
@@ -253,14 +271,13 @@ const IconLegendContainer = styled.div`
   // flex-direction: row;
   justify-content: space-around;
 
-  border: 3px dotted yellow; // DEV
+  // border: 3px dotted yellow; // DEV
 `;
 
 const TextContainerBox = styled.div`
   // height: 71px; // DECIDE
-  height
 
-  background-color: rgba(51, 204, 255, 0.5); // DEV blue
+  // background-color: rgba(51, 204, 255, 0.5); // DEV blue
   // border: 3px dotted hotpink;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
@@ -281,13 +298,10 @@ const ContentContainer = styled.div`
   // object-fit: scale-down;
   // object-fit: none;
 
-  border: 3px dotted #9933ff; // purple  DEV
+  // border: 3px dotted #9933ff; // purple  DEV
 
   padding: 10px; // DECIDE
 `;
-
-// TODO make it so it only works when hovering the right thing
-// TODO Adjust from biggest list
 
 const List = styled.ul`
   margin-left: 0;
@@ -297,19 +311,16 @@ const List = styled.ul`
 `;
 
 const ListTitle = styled.h6`
-  font-size: 0.8em;
+  color: ${colors.color_primary08}; // DEV
+  font-family: ${fonts.font_sectiontitle}, serif;
+  font-style: italic;
+  font-size: 1em;
   font-weight: 500;
-
-  // background-color: rgba(139, 0, 0, 0.5); // DEV brown
 `;
 const ListItem = styled.div`
   font-size: 0.8em;
-  font-weight: 40000:21:0000:36:00☀️Long break!!DeleteTopComplete00:00;
-  // padding: 0; // DEV does not work
-  // margin: 0;// DEV does not work
+  color: ${colors.color_primary07}; // DEV
   line-height: 1em;
-
-  // background-color: rgba(222, 184, 135, 0.5); // DEV brown
 `;
 
 // *******************************************
@@ -320,7 +331,7 @@ export default function Attempt2() {
   const [open, setOpen] = useState(false); // we can chose later to make it open by default
   const [box, setBox] = useState("");
 
-  const [isHovering, setIsHovering] = useState(false);
+  // const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnters = () => {
     setOpen(true);
@@ -338,11 +349,11 @@ export default function Attempt2() {
       case "Sewing":
         return (
           <ContentContainer>
-            <ListTitle>Thread and Yarn</ListTitle>
+            <ListTitle>Fil et fibres</ListTitle>
             <List>
-              <ListItem>Mending</ListItem>
-              <ListItem>Historical Sewing</ListItem>
-              <ListItem>Knitting</ListItem>
+              <ListItem>Réparation</ListItem>
+              <ListItem>Reproductions historiques</ListItem>
+              <ListItem>Corchet/tricot</ListItem>
             </List>
           </ContentContainer>
         );
@@ -350,11 +361,11 @@ export default function Attempt2() {
       case "art":
         return (
           <ContentContainer>
-            <ListTitle>Artsy stuff</ListTitle>
+            <ListTitle>Création d'image</ListTitle>
             <List>
-              <ListItem>Doodling</ListItem>
-              <ListItem>Painting</ListItem>
-              <ListItem>Digital art</ListItem>
+              <ListItem>Dessin</ListItem>
+              <ListItem>Painture</ListItem>
+              <ListItem>Dessin digital</ListItem>
             </List>
           </ContentContainer>
         );
@@ -362,10 +373,10 @@ export default function Attempt2() {
       case "stories":
         return (
           <ContentContainer>
-            <ListTitle>Stories</ListTitle>
+            <ListTitle>Histoires</ListTitle>
             <List>
-              <ListItem>Reading</ListItem>
-              <ListItem>Writing</ListItem>
+              <ListItem>Lecture</ListItem>
+              <ListItem>Écriture</ListItem>
             </List>
           </ContentContainer>
         );
@@ -373,11 +384,11 @@ export default function Attempt2() {
       case "diy":
         return (
           <ContentContainer>
-            <ListTitle>DIYing</ListTitle>
+            <ListTitle>Bricolage</ListTitle>
             <List>
-              <ListItem>Repairs</ListItem>
-              <ListItem>Craftings</ListItem>
-              <ListItem>Home improvement</ListItem>
+              <ListItem>Réparations</ListItem>
+              <ListItem>Travaux manuels</ListItem>
+              <ListItem>Arts créatifs</ListItem>
             </List>
           </ContentContainer>
         );
@@ -385,11 +396,11 @@ export default function Attempt2() {
       case "play":
         return (
           <ContentContainer>
-            <ListTitle>Media consumption</ListTitle>
+            <ListTitle>Consommation de médias</ListTitle>
             <List>
-              <ListItem>Music</ListItem>
+              <ListItem>Musique</ListItem>
               <ListItem>Podcasts</ListItem>
-              <ListItem>Movies - Shows - Documentaries</ListItem>
+              <ListItem>Films - Séries - Documentaires</ListItem>
             </List>
           </ContentContainer>
         );
@@ -397,10 +408,10 @@ export default function Attempt2() {
       case "d20":
         return (
           <ContentContainer>
-            <ListTitle>Role Playing</ListTitle>
+            <ListTitle>Role Play</ListTitle>
             <List>
               <ListItem>RPGs</ListItem>
-              <ListItem>Theatre</ListItem>
+              <ListItem>Théatre</ListItem>
             </List>
           </ContentContainer>
         );
@@ -409,14 +420,6 @@ export default function Attempt2() {
         return null;
     }
   };
-
-  // const fadeout = () => {};
-
-  // All animations will take twice the time to accomplish
-  // document.documentElement.style.setProperty("--animate-duration", "2s");
-
-  // All animations will take half the time to accomplish
-  // document.documentElement.style.setProperty('--animate-duration', '.5s');
 
   // *******************************************
   // FINAL RENDER
@@ -440,9 +443,7 @@ export default function Attempt2() {
             setBox("art");
             handleMouseEnters();
           }}
-          onMouseLeave={() => {
-            // toggle();
-          }}
+          onMouseLeave={handleMouseLeaves}
         >
           <Icon src={sketchbook64} alt="sketchbook icon" />
         </HoverIconBox>
@@ -452,6 +453,7 @@ export default function Attempt2() {
             setBox("stories");
             handleMouseEnters();
           }}
+          onMouseLeave={handleMouseLeaves}
         >
           <Icon src={book2} alt="magical book icon" />
         </HoverIconBox>
@@ -461,6 +463,7 @@ export default function Attempt2() {
             setBox("diy");
             handleMouseEnters();
           }}
+          onMouseLeave={handleMouseLeaves}
         >
           <Icon src={diy64} alt="diy icon" />
         </HoverIconBox>
@@ -470,6 +473,7 @@ export default function Attempt2() {
             setBox("play");
             handleMouseEnters();
           }}
+          onMouseLeave={handleMouseLeaves}
         >
           <Icon src={play4} alt="media play icon" />
         </HoverIconBox>
@@ -479,6 +483,7 @@ export default function Attempt2() {
             setBox("d20");
             handleMouseEnters();
           }}
+          onMouseLeave={handleMouseLeaves}
         >
           <Icon src={d2064} alt="d20 icon" />
         </HoverIconBox>

@@ -167,7 +167,8 @@ const Tags = styled.div`
   flex-direction: row;
   justify-content: right;
   flex-wrap: wrap;
-  //   padding: 3px;
+
+  row-gap: 3px;
 
   width: 90%;
   border-radius: 5px;

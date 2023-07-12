@@ -179,14 +179,13 @@ const SchoolDates = styled.div`
 const Tags = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 3px;
   justify-content: right;
-  //   padding: 3px;
 
   width: 90%;
   border-radius: 5px;
   font-size: 11px;
-
-  //   background-color: yellow; // DEV
 `;
 
 const Tag = styled.div`
@@ -268,13 +267,6 @@ function Education() {
                 </SchoolInfo>
               </TitleSection>
             </SchoolHeader>
-
-            {/* <Button>Try One</Button>
-            <Button theme={theme}>Try Two</Button>
-            <Button theme={{ main: "royalblue" }}>Try Three</Button>
-            <Button theme={{ main: "hotpink" }}>Try Four</Button> */}
-
-            {/* === "in English" ? "green" : "grey"}; */}
 
             <SchoolBody>
               <SchoolExtralInfo>

@@ -125,7 +125,10 @@ const IconLinkedIn = styled.img.attrs(({ src }) => ({
 export default function Footer() {
   return (
     <FooterContainer>
-      <Bye>I'm looking forward to hearing from you!</Bye>
+      {/* <Bye>I'm looking forward to hearing from you!</Bye> */}
+      {/* <Bye>Dans l'attente d'avoir de vos nouvelles.</Bye> */}
+      <Bye>Au plaisir d'échanger avec vous bientôt.</Bye>
+      {/* <Bye>Au plaisir de collaborer avec vous.</Bye> */}
 
       <IconBox>
         <Link href="mailto:so.gayat@gmail.com">

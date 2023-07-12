@@ -4,7 +4,6 @@
 import styled from "styled-components";
 import Chart from "./Chart";
 import Hobbies from "./Hobbies";
-import Hobbies2 from "./Hobbies2";
 import Education from "./Education";
 import Experience from "./Experience";
 import ExtraInfo from "./Extras";
