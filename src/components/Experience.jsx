@@ -264,7 +264,7 @@ function Education() {
                 </Tags>
               </XPExtralInfo>
               <Collapse
-                title="Responsibilities"
+                title="responsabilités"
                 // text=
                 content={listData.responsibilities.map((s) => (
                   <Responsibilities key={s}>{s}</Responsibilities>

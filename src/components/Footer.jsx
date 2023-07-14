@@ -135,7 +135,11 @@ export default function Footer() {
           <IconEmail src={email} />
         </Link>
 
-        <Link href="https://www.linkedin.com/in/alice-gayat/">
+        <Link
+          href="https://www.linkedin.com/in/alice-gayat/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <IconLinkedIn src={linkedin} />
         </Link>
       </IconBox>

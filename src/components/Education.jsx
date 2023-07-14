@@ -278,7 +278,7 @@ function Education() {
                 </Tags>
               </SchoolExtralInfo>
               <Collapse
-                title="more"
+                title="détails"
                 // text=
                 content={listData.description}
                 activities={listData.activities}

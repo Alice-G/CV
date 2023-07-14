@@ -182,7 +182,6 @@ const Func = styled.span`
   color: ${colors.color_func};
 `;
 
-//TODO find out correct name for this
 const Colorobject = styled.span`
   color: ${colors.color_class};
 
@@ -194,7 +193,6 @@ const Colorobject = styled.span`
   }
 `;
 
-// TODO change
 const Colorvariable = styled.span`
   color: ${colors.color_white};
 
@@ -225,7 +223,11 @@ export default function Header() {
         </Line>
         <Line>
           LinkedIn Alias<Operator>:</Operator>
-          <a href="https://www.linkedin.com/in/alice-gayat/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/alice-gayat/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Parameter> alice-gayat</Parameter>
           </a>
         </Line>
@@ -241,14 +243,6 @@ export default function Header() {
               English<Operator>:</Operator>
               <String> "Bilingue"</String>
             </Line>
-            {/* <Line>
-              Spanish<Operator>:</Operator>
-              <Parameter> Learning</Parameter>
-            </Line> */}
-            {/* <Line>
-              German<Operator>:</Operator>
-              <Parameter> Notions</Parameter>
-            </Line> */}
             <SemiCol />
           </section>
         </section>

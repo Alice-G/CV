@@ -7,8 +7,6 @@ import colors from "../style/colors";
 import fonts from "../style/fonts";
 import { Radar } from "react-chartjs-2";
 
-// TODO change padding and shape
-
 // *************************************
 // XXXXXXXX
 // *************************************
@@ -41,22 +39,22 @@ const TopLevelContainer = styled.div`
   // HINT HINT HINT HINT HINT HINT
   // HINT HINT HINT HINT HINT HINT
 
-  border: 2px double cadetblue; // DEV
+  // border: 2px double cadetblue; // DEV
 
   @media (min-width: 769px) and (max-width: 1199px) {
-    border: 2px double green; // DEV
+    // border: 2px double green; // DEV
     // width: 80%;  NO
     // padding: 0 20px;
   }
 
   @media (min-width: 375px) and (max-width: 768px) {
-    border: 2px double orange; // DEV
+    // border: 2px double orange; // DEV
     // width: 500px;
     width: 85%;
   }
 
   @media (max-width: 375px) {
-    border: 2px double skyblue; // DEV
+    // border: 2px double skyblue; // DEV
   }
 `;
 
@@ -84,10 +82,6 @@ const SectionTitle = styled.h3`
   }
 `;
 
-// HINT HINT HINT HINT HINT
-// HINT HINT HINT HINT HINT
-// HINT HINT HINT HINT HINT
-
 // chart sheer white background
 const ComponentContainer = styled.div`
   display: flex;
@@ -101,26 +95,26 @@ const ComponentContainer = styled.div`
 
   width: 80%;
 
-  border: 3px dashed cadetblue; // DEV
+  // border: 3px dashed cadetblue; // DEV
 
   @media (min-width: 769px) and (max-width: 1199px) {
-    border: 2px dashed green; // DEV
+    // border: 2px dashed green; // DEV
     //
   }
 
   @media (min-width: 571px) and (max-width: 768px) {
-    border: 2px dashed orange; // DEV
+    // border: 2px dashed orange; // DEV
     padding: 0 20px;
   }
 
   @media (min-width: 376px) and (max-width: 570px) {
-    border: 2px dashed indianred; // DEV
+    // border: 2px dashed indianred; // DEV
 
     padding: 0 20px;
   }
 
   @media (max-width: 375px) {
-    border: 2px dashed skyblue; // DEV
+    // border: 2px dashed skyblue; // DEV
   }
 `;
 
@@ -133,21 +127,21 @@ const ChartContainer = styled.div`
   // HINT HINT HINT HINT HINT HINT
   // HINT HINT HINT HINT HINT HINT
 
-  border: 3px dotted orange; // DEV
+  // border: 3px dotted orange; // DEV
 
   @media (min-width: 769px) and (max-width: 1199px) {
-    border: 3px dotted cadetblue; // DEV
+    // border: 3px dotted cadetblue; // DEV
     width: 600px;
   }
 
   @media (min-width: 571px) and (max-width: 768px) {
-    border: 3px dotted pink; // DEV
+    // border: 3px dotted pink; // DEV
 
     width: 550px;
   }
 
   @media (min-width: 376px) and (max-width: 570px) {
-    border: 3px dotted skyblue; // DEV
+    // border: 3px dotted skyblue; // DEV
 
     // HINT
     // HINT
@@ -160,7 +154,7 @@ const ChartContainer = styled.div`
     width: 300px;
     height: 350px;
 
-    border: 3px dotted green; // DEV
+    // border: 3px dotted green; // DEV
   }
 `;
 
@@ -173,20 +167,6 @@ const Note = styled.p`
 
   color: ${colors.color_sectiontitle};
 `;
-
-// BLOCK BLOCK BLOCK
-
-//     {
-//       label: "My First Dataset",
-//       data: [65, 59, 90, 81, 56, 55, 40],
-//       fill: true,
-//       backgroundColor: "rgba(255, 99, 132, 0.2)",
-//       borderColor: "rgb(255, 99, 132)",
-//       pointBackgroundColor: "rgb(255, 99, 132)",
-//       pointBorderColor: "#fff",
-//       pointHoverBackgroundColor: "#fff",
-//       pointHoverBorderColor: "rgb(255, 99, 132)",
-//     },
 
 ChartJS.register(
   RadialLinearScale,
@@ -277,15 +257,15 @@ const options = {
 export const data = {
   labels: [
     "Problem Solving",
-    "Stress Managment",
+    "Gestion du Stress",
     "Multitasking",
-    "Creativity",
-    "Strategy",
-    "Versatility",
-    "Autonomy - Self-Reliance",
-    "Resilience",
-    "Teamwork",
-    "Technical Skills",
+    "Créativité",
+    "Stratégie",
+    "Versatilité",
+    "Autonomie",
+    "Résilience",
+    "Travail d'équipe",
+    "Compétences Techniques",
   ],
   datasets: [
     {
@@ -303,14 +283,14 @@ export const data = {
       borderWidth: 1,
     },
     {
-      label: "Business School",
+      label: "ESC",
       data: [1, 4, 7, 7, 4, 7, 8, 6, 6, 4],
       backgroundColor: "rgba(132, 96, 117, 0.2)",
       borderColor: "rgba(132, 96, 117, 1)",
       borderWidth: 1,
     },
     {
-      label: "Dev Studies",
+      label: "Études code",
       data: [9, 8, 8, 8, 7, 7, 9, 7, 7, 9],
       backgroundColor: "rgba(240, 164, 108, 0.2)",
       borderColor: "rgba(240, 164, 108, 1)",
