@@ -8,6 +8,7 @@ import Education from "./Education";
 import Experience from "./Experience";
 import ExtraInfo from "./Extras";
 
+import fonts from "../style/fonts";
 import colors from "../style/colors";
 
 // *************************************
@@ -35,6 +36,29 @@ const MainBitContainer = styled.div`
   // @media (max-width: 375px) {
   //   gap: 15px;
   // }
+`;
+
+const SectionTitle = styled.h1`
+  font-family: ${fonts.font_sectiontitle}, serif;
+  font-style: italic;
+  font-size: 50px;
+
+  color: #d3c2ae;
+
+  margin: auto;
+  padding-top: 10px;
+
+  // border: 3px dotted blue; // DEV
+
+  @media (min-width: 375px) and (max-width: 1199px) {
+    font-size: 40px;
+    // border: 3px dotted green; // DEV
+  }
+
+  @media (max-width: 375px) {
+    // border: 3px dotted skyblue; // DEV
+    font-size: 30px;
+  }
 `;
 
 const ChartContainer = styled.div`
@@ -224,6 +248,7 @@ const Link404 = styled.a`
 export default function MainBit() {
   return (
     <MainBitContainer>
+      <SectionTitle>Dev Front End</SectionTitle>
       <ChartContainer>
         <Chart />
       </ChartContainer>

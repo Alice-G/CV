@@ -9,7 +9,7 @@
     "dates": "2022 - 2023",
     "description": "HTML, CSS, Sass, JavaScript (ES13), React.js, MongoDB Atlas",
     "location": "remote",
-    "tags": []
+    "tags": ["projets pratiques"]
   },
   {
     "id": "UMich",
@@ -70,6 +70,6 @@
     "location": "Troyes",
     "activities": "Activities and societies: Theatre. Writing.",
 
-    "tags": ["in English", ""]
+    "tags": []
   }
 ]

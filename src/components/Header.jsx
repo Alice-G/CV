@@ -1,10 +1,5 @@
 // BLOCK FIXME LEG BUG TODO HINT DEL TEST ASK WEIRD CHECK DEV VALIDATOR
 
-// TODO TODO TODO
-// TODO Email
-// TODO linked in
-// TODO MAKE TITLE AND PIC ARRANGE WHOLE HEADER
-
 import React from "react";
 
 // import styled, { createGlobalStyle } from "styled-components"; DEV
@@ -208,9 +203,9 @@ export default function Header() {
     <HeaderContainer>
       <CodeBox>
         <Name>Alice_Gayat</Name>
-        <Line>
+        {/* <Line>
           Age<Operator>:</Operator> <Parameter>36</Parameter>
-        </Line>
+        </Line> */}
         <Line>
           Phone<Operator>:</Operator>{" "}
           <FuncPhone href="tel:+33 0625277945">+33 0625277945</FuncPhone>
@@ -218,7 +213,7 @@ export default function Header() {
         <Line>
           Email<Operator>:</Operator>
           <a href="mailto:so.gayat@gmail.com">
-            <Parameter> so.gayat@gmail.com</Parameter>
+            <String> "agayat.dev@gmail.com"</String>
           </a>
         </Line>
         <Line>
@@ -237,11 +232,11 @@ export default function Header() {
           <section>
             <Line>
               Français<Operator>:</Operator>
-              <String> "Bilingue"</String>
+              <String> "Native"</String>
             </Line>
             <Line>
               English<Operator>:</Operator>
-              <String> "Bilingue"</String>
+              <Func> C2</Func>
             </Line>
             <SemiCol />
           </section>

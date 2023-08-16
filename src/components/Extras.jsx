@@ -145,7 +145,7 @@ const ListItem = styled.li`
 function ExtraInfo() {
   return (
     <ExtraInfoOutterContainer>
-      <SectionTitle>Les Petits Plus</SectionTitle>
+      <SectionTitle>Détails</SectionTitle>
 
       <ExtraInfoContainer>
         <LanguageContainer>
@@ -184,7 +184,6 @@ function ExtraInfo() {
               <ListItem>Git-GitHub</ListItem>
               <ListItem>Redmine</ListItem>
               <ListItem>Salesforce (admin)</ListItem>
-              <ListItem>Bureautique</ListItem>
             </List>
           </ListContainer>
         </SoftwaresContainer>

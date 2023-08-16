@@ -5,7 +5,7 @@
     "workplace": "Bistro Burger",
     "location": "Paris",
     "sector": "restauration",
-    "dates": "Jul 2018 - Aug 2022",
+    "dates": "4+ ans · Jul 2018 - Aug 2022",
     "responsibilities": [
       "Team Coordination",
       "Shift Management",
@@ -22,7 +22,7 @@
     "workplace": "Breakfast In America",
     "location": "Paris",
     "sector": "restauration",
-    "dates": "  Jun 2014 - Oct 2018",
+    "dates": "4+ ans · Jun 2014 - Oct 2018",
     "responsibilities": ["Key Holder", "Shift Management", "Till check"],
     "tags": [" in english"]
   },
@@ -33,7 +33,7 @@
     "workplace": "talkSpirit",
     "sector": "SS2I",
     "location": "Malakoff",
-    "dates": "Jun 2012 - Dec 2012 · 7 mos",
+    "dates": "7 mois · Jun - Dec 2012",
     "responsibilities": [
       "Gestion de Projet Evénementiel",
       "Concept & contenu du site web de la soirée de lancement",
@@ -50,17 +50,16 @@
     "id": "Harveys",
     "jobtitle": "Senior Salesperson",
     "workplace": "Harvey Norman",
-    "sector": "retail",
+    "sector": "vente",
     "dates": "Aug 2010 - Jan 2011",
     "location": "AUSTRALIA",
-    "description": "20h/semaine, visa étudiant, pendant les cours",
-    "skills": "???????????????????????",
     "responsibilities": [
+      "20h/semaine, visa étudiant, pendant les cours",
       "Assistance au consommateur, vente",
       "Gestion des stocks et commandes",
       "Fonctionnement en équipe (gestion de l'information)"
     ],
-    "tags": [" in English"]
+    "tags": [" in English", " job étudiant"]
   },
 
   {
@@ -76,6 +75,6 @@
       "DB: usage & maintenance",
       "Créa Photoshop"
     ],
-    "tags": []
+    "tags": [" stage"]
   }
 ]

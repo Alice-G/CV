@@ -408,10 +408,15 @@ export default function Attempt2() {
       case "d20":
         return (
           <ContentContainer>
-            <ListTitle>Role Play</ListTitle>
+            <ListTitle>Role Play / Social</ListTitle>
             <List>
               <ListItem>RPGs</ListItem>
               <ListItem>Théatre</ListItem>
+              <ListItem>
+                Bénévolat
+                <ListItem>(Auxiliaires des aveugles/</ListItem>
+                <ListItem>assos étudiantes)</ListItem>
+              </ListItem>
             </List>
           </ContentContainer>
         );
@@ -427,7 +432,7 @@ export default function Attempt2() {
 
   return (
     <TopLevelContainer>
-      <SectionTitle>Hobbies</SectionTitle>
+      <SectionTitle>Centres d'intérêt</SectionTitle>
       <IconListContainer>
         <HoverIconBox
           onMouseEnter={() => {

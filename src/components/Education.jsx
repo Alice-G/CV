@@ -245,9 +245,7 @@ const theme = {
 function Education() {
   return (
     <EducationContainer>
-      <EducationSectionTitle>
-        Formation Professionnalisante
-      </EducationSectionTitle>
+      <EducationSectionTitle>Parcours / Formation</EducationSectionTitle>
       {education.map((listData) => {
         console.log(listData);
         return (
