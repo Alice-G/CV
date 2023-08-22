@@ -171,8 +171,8 @@ function ExtraInfo() {
           <Title>Softwares, APIs and Services</Title>
           <ListContainer>
             <List>
-              <ListItem>LightHouse</ListItem>
-              <ListItem>WebAIM WAVE</ListItem>
+              <ListItem>Figma</ListItem>
+              <ListItem>LightHouse, WAVE</ListItem>
               <ListItem>Postman</ListItem>
               <ListItem>MongoDB  - Atlas</ListItem>
               <ListItem>VSCode - Sublime Text</ListItem>
