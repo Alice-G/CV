@@ -269,7 +269,7 @@ export default function MainBit() {
         <C2BoxLong>
           <ExtraInfo />
           <Link404Box>
-            <Link404 href="/xyz">Et si le lien n'était pas bon? 🤔</Link404>
+            <Link404 href="/xyz">Et si le lien n'était pas bon ? 🤔</Link404>
           </Link404Box>
         </C2BoxLong>
       </Container2>

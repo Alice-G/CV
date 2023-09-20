@@ -120,14 +120,9 @@ const ComponentContainer = styled.div`
 
 const ChartContainer = styled.div`
   height: 700px; // careful with responsive adjustments, only way to center the chart
+  width: 700px;
 
   // border: 3px dotted blue; // DEV
-
-  // HINT HINT HINT HINT HINT HINT
-  // HINT HINT HINT HINT HINT HINT
-  // HINT HINT HINT HINT HINT HINT
-
-  // border: 3px dotted orange; // DEV
 
   @media (min-width: 769px) and (max-width: 1199px) {
     // border: 3px dotted cadetblue; // DEV
@@ -143,9 +138,6 @@ const ChartContainer = styled.div`
   @media (min-width: 376px) and (max-width: 570px) {
     // border: 3px dotted skyblue; // DEV
 
-    // HINT
-    // HINT
-
     width: 470px;
     height: 460px;
   }
@@ -157,6 +149,10 @@ const ChartContainer = styled.div`
     // border: 3px dotted green; // DEV
   }
 `;
+
+// HINT HINT HINT HINT HINT HINT
+// HINT HINT HINT HINT HINT HINT
+// HINT HINT HINT HINT HINT HINT
 
 const Note = styled.p`
   font-size: 0.9em;
@@ -270,7 +266,7 @@ export const data = {
   datasets: [
     {
       label: "Marcom",
-      data: [4, 7, 6, 6, 7, 7, 4, 7, 8, 4],
+      data: [3, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 4, 2.5, 3.5],
       backgroundColor: "rgba(92, 157, 118, 0.2)",
       borderColor: "rgba(92, 157, 118, 1)",
       borderWidth: 1,
@@ -284,14 +280,14 @@ export const data = {
     },
     {
       label: "ESC",
-      data: [1, 4, 7, 7, 4, 7, 8, 6, 6, 4],
+      data: [3, 4, 7, 7, 4, 6, 7, 5, 5, 3],
       backgroundColor: "rgba(132, 96, 117, 0.2)",
       borderColor: "rgba(132, 96, 117, 1)",
       borderWidth: 1,
     },
     {
       label: "Études code",
-      data: [9, 8, 8, 8, 7, 7, 9, 7, 7, 9],
+      data: [9, 8, 5, 6, 5, 5, 9, 7, 2, 9],
       backgroundColor: "rgba(240, 164, 108, 0.2)",
       borderColor: "rgba(240, 164, 108, 1)",
       borderWidth: 1,

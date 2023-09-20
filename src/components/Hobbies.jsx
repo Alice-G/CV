@@ -210,6 +210,13 @@ const SectionTitle = styled.h3`
   // border: 3px dotted brown; // DEV
 `;
 
+const Prompt = styled.div`
+  font-size: 12px;
+  min-width: 100px;
+  color: rgba(255, 255, 255, 0.4);
+  // border: 2px dotted hotpink; // DEV
+`;
+
 const HoverIconBox = styled.div`
   display: flex;
   justify-content: space-around;
@@ -353,7 +360,7 @@ export default function Attempt2() {
             <List>
               <ListItem>Réparation</ListItem>
               <ListItem>Reproductions historiques</ListItem>
-              <ListItem>Corchet/tricot</ListItem>
+              <ListItem>Crochet/tricot</ListItem>
             </List>
           </ContentContainer>
         );
@@ -433,6 +440,7 @@ export default function Attempt2() {
   return (
     <TopLevelContainer>
       <SectionTitle>Centres d'intérêt</SectionTitle>
+      <Prompt>Hover the icons!</Prompt>
       <IconListContainer>
         <HoverIconBox
           onMouseEnter={() => {
