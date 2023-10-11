@@ -275,12 +275,18 @@ export default function MainBit() {
       <Container2>
         <C2BoxSmall>
           <Hobbies />
+          {/* <Link404Box>
+            <Link404 href="/xyz">Et si le lien n'était pas bon ? 🤔</Link404>
+          </Link404Box> */}
+        </C2BoxSmall>
+        <C2BoxLong>
+          {/* <ChartContainer>
+            <Chart />
+            </ChartContainer> */}
+
           <Link404Box>
             <Link404 href="/xyz">Et si le lien n'était pas bon ? 🤔</Link404>
           </Link404Box>
-        </C2BoxSmall>
-        <C2BoxLong>
-          <ChartContainer>{/* <Chart /> */}</ChartContainer>
         </C2BoxLong>
       </Container2>
     </MainBitContainer>
