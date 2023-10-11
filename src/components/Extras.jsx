@@ -13,11 +13,29 @@ import fonts from "../style/fonts";
 
 const ExtraInfoOutterContainer = styled.div`
   padding: 5px; // ?? DEV
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
+  margin: auto;
+  padding-top: 10px;
 
   // border: 2px dotted cadetblue; // DEV
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    // border: 2px dotted indianred; // DEV
+  }
+
+  @media (min-width: 769px) and (max-width: 991px) {
+    // border: 2px dotted orange; // DEV
+  }
+
+  @media (min-width: 376px) and (max-width: 768px) {
+    // border: 2px dotted mediumpurple; // DEV
+  }
+
+  @media (max-width: 375px) {
+    // border: 2px dotted pink; // DEV
+  }
 `;
 
 const ExtraInfoContainer = styled.div`
@@ -31,8 +49,6 @@ const ExtraInfoContainer = styled.div`
     flex-direction: column;
     align-items: center;
   }
-
-  // border: 3px dotted yellow; //DEV
 `;
 
 const SectionTitle = styled.h2`
@@ -145,7 +161,7 @@ const ListItem = styled.li`
 function ExtraInfo() {
   return (
     <ExtraInfoOutterContainer>
-      <SectionTitle>Détails</SectionTitle>
+      <SectionTitle>Compétences et savoir faire</SectionTitle>
 
       <ExtraInfoContainer>
         <LanguageContainer>

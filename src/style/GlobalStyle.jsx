@@ -61,9 +61,9 @@ const StyledGlobalStyle = createGlobalStyle`
       background: linear-gradient(284deg, #0f0c29, #302b63, #24243e);
       background-size: 400% 400%;
     
-      -webkit-animation: AnimationName 20s ease infinite; // DECIDE if longer
-      -moz-animation: AnimationName 20s ease infinite;
-      animation: AnimationName 20s ease infinite;
+      -webkit-animation: AnimationName 15s ease infinite; // DECIDE if longer
+      -moz-animation: AnimationName 15s ease infinite;
+      animation: AnimationName 15s ease infinite;
     
       @-webkit-keyframes AnimationName {
         0% {

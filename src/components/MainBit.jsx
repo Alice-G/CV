@@ -2,11 +2,13 @@
 // dotted - dashed - solid - double - groove - ridge - inset - outset
 
 import styled from "styled-components";
+import Projects from "./Projects";
 import Chart from "./Chart";
 import Hobbies from "./Hobbies";
 import Education from "./Education";
 import Experience from "./Experience";
 import ExtraInfo from "./Extras";
+import Skills from "./Skills";
 
 import fonts from "../style/fonts";
 import colors from "../style/colors";
@@ -196,31 +198,39 @@ const C2BoxSmall = styled.div`
 `;
 
 const C2BoxLong = styled.div`
-  width: 68%;
+  // width: 68%;
+  width: 60%;
+
   @media (max-width: 768px) {
     color: orange; // DEV
     margin-top: 10px;
     width: 80%;
   }
 
-  // border: 3px dotted lightsalmon; // DEV
+  // border: 3px dotted mediumpurple; // DEV
 `;
 
-//TODO do I want the overbox and center styling??
+//TODO do i want link here or below?
 const Link404Box = styled.div`
   display: flex;
   justify-content: space-around;
 
+  // border: 3px dotted lightsalmon; // DEV
+
   @media (min-width: 769px) and (max-width: 1199px) {
-    //   green; // DEV
+    // border: 3px dotted green; // DEV
     justify-content: left;
     padding-left: 20px;
   }
 
-  @media (max-width: 768px) {
-    //   orange; // DEV
+  @media (min-width: 376px) and (max-width: 768px) {
+    // border: 3px dotted cadetblue; // DEV
 
     margin-top: 10px;
+  }
+
+  @media (max-width: 375px) {
+    // border: 3px dotted skyblue; // DEV
   }
 
   // border: 3px dotted lightsalmon; // DEV
@@ -249,9 +259,9 @@ export default function MainBit() {
   return (
     <MainBitContainer>
       <SectionTitle>Dev Front End</SectionTitle>
-      <ChartContainer>
-        <Chart />
-      </ChartContainer>
+      <Projects />
+      <ExtraInfo />
+      <Skills />
 
       <Container1>
         <C1BoxLong>
@@ -265,12 +275,14 @@ export default function MainBit() {
       <Container2>
         <C2BoxSmall>
           <Hobbies />
-        </C2BoxSmall>
-        <C2BoxLong>
-          <ExtraInfo />
           <Link404Box>
             <Link404 href="/xyz">Et si le lien n'était pas bon ? 🤔</Link404>
           </Link404Box>
+        </C2BoxSmall>
+        <C2BoxLong>
+          <ChartContainer>
+            <Chart />
+          </ChartContainer>
         </C2BoxLong>
       </Container2>
     </MainBitContainer>

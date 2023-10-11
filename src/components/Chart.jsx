@@ -35,15 +35,11 @@ const TopLevelContainer = styled.div`
   // background-color: rgb(193, 193, 193, 0.2);
   // border-radius: 20px;
 
-  // HINT HINT HINT HINT HINT HINT
-  // HINT HINT HINT HINT HINT HINT
-  // HINT HINT HINT HINT HINT HINT
-
   // border: 2px double cadetblue; // DEV
 
   @media (min-width: 769px) and (max-width: 1199px) {
     // border: 2px double green; // DEV
-    // width: 80%;  NO
+    // width: 80%;  //NO
     // padding: 0 20px;
   }
 
@@ -56,6 +52,8 @@ const TopLevelContainer = styled.div`
   @media (max-width: 375px) {
     // border: 2px double skyblue; // DEV
   }
+
+  // border: 2px double skyblue; // DEV
 `;
 
 const SectionTitle = styled.h3`
@@ -91,20 +89,21 @@ const ComponentContainer = styled.div`
   background-color: rgb(193, 193, 193, 0.2);
   border-radius: 20px;
 
-  // padding: 0 50px;
-
-  width: 80%;
+  width: 65%;
+  padding: 15px;
+  // height: 700px;
 
   // border: 3px dashed cadetblue; // DEV
 
   @media (min-width: 769px) and (max-width: 1199px) {
     // border: 2px dashed green; // DEV
-    //
+    width: 75%;
   }
 
   @media (min-width: 571px) and (max-width: 768px) {
     // border: 2px dashed orange; // DEV
     padding: 0 20px;
+    width: 90%;
   }
 
   @media (min-width: 376px) and (max-width: 570px) {
@@ -119,49 +118,75 @@ const ComponentContainer = styled.div`
 `;
 
 const ChartContainer = styled.div`
-  height: 700px; // careful with responsive adjustments, only way to center the chart
-  width: 700px;
+  // width: 100%;
+  // height: 550px; // careful with responsive adjustments, only way to center the chart
+  // width: 550px;
+
+  // HINT HINT HINT blue dots
 
   // border: 3px dotted blue; // DEV
 
-  @media (min-width: 769px) and (max-width: 1199px) {
+  @media (min-width: 991px) and (max-width: 1199px) {
     // border: 3px dotted cadetblue; // DEV
-    width: 600px;
+    // width: 500px;
+  }
+
+  @media (min-width: 769px) and (max-width: 990px) {
+    // border: 3px dotted hotpink; // DEV
+    // width: 450px;
+    // height: 450px;
   }
 
   @media (min-width: 571px) and (max-width: 768px) {
     // border: 3px dotted pink; // DEV
-
-    width: 550px;
+    width: 450px;
   }
 
+  // STARTING HERE IT'D BE BETTER TO HAVE IMG CHART DEV TODO
   @media (min-width: 376px) and (max-width: 570px) {
     // border: 3px dotted skyblue; // DEV
-
-    width: 470px;
-    height: 460px;
+    // width: 470px;
+    // height: 460px;
   }
 
   @media (max-width: 375px) {
-    width: 300px;
-    height: 350px;
+    // width: 300px;
+    // height: 350px;
 
     // border: 3px dotted green; // DEV
   }
 `;
 
-// HINT HINT HINT HINT HINT HINT
-// HINT HINT HINT HINT HINT HINT
-// HINT HINT HINT HINT HINT HINT
-
 const Note = styled.p`
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 300;
   font-style: italic;
 
   margin: auto; // center
+  width: 450px;
 
   color: ${colors.color_sectiontitle};
+  // border: 2px dotted white; // DEV
+
+  @media (min-width: 769px) and (max-width: 990px) {
+    width: 400px;
+  }
+
+  @media (min-width: 571px) and (max-width: 768px) {
+    width: 400px;
+  }
+
+  // STARTING HERE IT'D BE BETTER TO HAVE IMG CHART DEV TODO
+  @media (min-width: 376px) and (max-width: 570px) {
+    width: 200px;
+    font-size: 0.7em;
+  }
+
+  @media (max-width: 375px) {
+    // border: 2px dotted mediumpurple; // DEV
+    font-size: 0.7em;
+    width: 170px;
+  }
 `;
 
 ChartJS.register(
@@ -178,8 +203,10 @@ ChartJS.register(
 const options = {
   responsive: true,
 
-  maintainAspectRatio: true, // Add to prevent default behaviour of full-width/height CHECK
+  maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height CHECK
   layout: {
+    // autoPadding: "false", // not sure that did anything?
+
     padding: {
       left: 5,
       right: 5,
@@ -217,17 +244,7 @@ const options = {
       },
     },
     tooltip: {
-      // hover legend
-      enabled: false, // looks like it worked
-
-      // titleColor: "blue", // DEV
-      // backgroundColor: "#fff", // DEV
-      // titleFont {} // DEV
-      // bodyColor: "red", // DEV
-      // footerColor: "green", // CHECK who??
-      // displayColors: true, // does not work DEV
-      // borderColor: "orange", // DEV
-      // borderWidth: 1, // DEV
+      enabled: false,
     },
   },
   scales: {

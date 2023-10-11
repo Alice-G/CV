@@ -92,30 +92,6 @@ const jello = keyframes`
 //     }
 // `;
 
-const Bloop = styled.div`
-  height: 80px;
-  width: 80px;
-  background-color: cadetblue;
-
-  // -webkit-animation-name: fadeOutDown;
-  // animation-name: fadeOutDown;
-  // -webkit-animation-duration: 1s;
-  // animation-duration: 1s;
-  // -webkit-animation-fill-mode: both;
-  // animation-fill-mode: both;
-
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  &:not(:hover) {
-    color: blue;
-  }
-`;
-
 // https://css-tricks.com/different-transitions-for-hover-on-hover-off/
 
 // *******************************************
