@@ -203,9 +203,6 @@ export default function Header() {
     <HeaderContainer>
       <CodeBox>
         <Name>Alice_Gayat</Name>
-        {/* <Line>
-          Age<Operator>:</Operator> <Parameter>36</Parameter>
-        </Line> */}
         <Line>
           Phone<Operator>:</Operator>{" "}
           <FuncPhone href="tel:+33 0625277945">+33 0625277945</FuncPhone>
@@ -224,6 +221,16 @@ export default function Header() {
             rel="noopener noreferrer"
           >
             <Parameter> alice-gayat</Parameter>
+          </a>
+        </Line>
+        <Line>
+          GitHub<Operator>:</Operator>
+          <a
+            href="https://github.com/Alice-G/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Parameter> Alice-G</Parameter>
           </a>
         </Line>
 

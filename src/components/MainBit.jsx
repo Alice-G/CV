@@ -280,9 +280,7 @@ export default function MainBit() {
           </Link404Box>
         </C2BoxSmall>
         <C2BoxLong>
-          <ChartContainer>
-            <Chart />
-          </ChartContainer>
+          <ChartContainer>{/* <Chart /> */}</ChartContainer>
         </C2BoxLong>
       </Container2>
     </MainBitContainer>
