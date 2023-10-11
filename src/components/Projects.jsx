@@ -181,6 +181,15 @@ const ListItem = styled.li`
   // border: 2px dotted cadetblue; // DEV
 `;
 
+const WebsiteLink = styled.div`
+  line-height: 19px;
+  text-align: right;
+  font-style: oblique;
+
+  color: ${colors.color_sectiontitle};
+  // border: 3px dotted cadetblue; //DEV
+`;
+
 function Education() {
   return (
     <PJContainer>
@@ -201,13 +210,19 @@ function Education() {
             </PJDescription>
             <PJDescription>Élements notables :</PJDescription>
 
-            <PJDescription></PJDescription>
-
             <List>
               <ListItem>galerie défilante</ListItem>
               <ListItem>composants collapse avec State</ListItem>
               <ListItem>composents remplis dynamiquement avec props</ListItem>
             </List>
+
+            <a
+              href="https://p7-kasa-gold.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WebsiteLink>Visiter la démo</WebsiteLink>
+            </a>
           </PJBody>
         </PJCard>
 
@@ -237,6 +252,13 @@ function Education() {
               </ListItem>
               <ListItem>Mot de passe haché </ListItem>
             </List>
+            {/* <a
+              href="https://p7-kasa-gold.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WebsiteLink>Link here</WebsiteLink>
+            </a> */}
           </PJBody>
         </PJCard>
       </PJCardsContainer>
